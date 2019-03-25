@@ -1,0 +1,62 @@
+#define base 0
+schedule:
+di 
+	int 
+		* x = mem[base],
+		* y = mem[base + 1];
+
+	int * z = mem[base + 2],
+	 	* t = mem[base + 3];
+	---------------------------------
+	|								|
+	|	stack -> process table[z,t]	|
+	|								|
+	---------------------------------
+	int h = z + 116, l = t + 117
+	z = mem[h], t = mem[l]
+	if(y == t && z == x)
+		z = base + 4
+		t = base + 5
+	---------------------------------
+	|								|
+	|	process table[z,t] -> regs	|
+	|								|
+	---------------------------------
+ei
+jump pc
+
+add_to_sch:
+	di
+	(bc <- input)
+	int * x(a) = mem[base],
+		* y(b) = mem[base + 1];
+	mem[x,y] = b
+	xy += 1
+	mem[x,y] = c
+	xy += 1
+	mem[base] = x
+	mem[base] = y
+ei
+ret
+
+
+00 0000 0000 ... 00 1111 1111 (PROGRAM)
+01 0000 0000 ... A
+01 0000 0001 ... B
+01 0000 0010 ... C
+01 0000 0011 ... D
+01 0000 0100 ... E
+01 0000 0101 ... H
+01 0000 0110 ... L
+01 0000 0111 ... SP H
+01 0000 1000 ... SH L
+01 0000 1001 ... PC H
+01 0000 1010 ... PC L
+01 0000 1011 ... BASE H
+01 0000 1100 ... BASE L
+01 0000 1101 ... CC
+
+01 0000 0000 ... 01 1111 1101 (STACK, REGS)
+01 1111 1110 ... 01 1111 1111 (NEXT PROCESS)
+
+

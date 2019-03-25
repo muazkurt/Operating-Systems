@@ -1,0 +1,96 @@
+#define base_process 
+add_process:
+	DI
+		PUSH B
+		LXI H, BASE
+		MVI B, 0
+		INCREMENT:
+			MOV A, B
+			INX H
+			ADI 1
+			CPI (sizeof a process's memmory segment - 2)
+			JNZ INCREMENT
+		Find:
+			MOV D, M
+			INX H
+			MOV E, M
+			INX H
+			
+			MOV A, H
+			CMP E
+			JNZ Found
+			MOV A, L
+			CMP D
+			JNZ Found
+			
+			MVI B, 0
+			INCREMENT:
+				MOV A, B
+				INX H
+				ADI 1
+				CPI (sizeof a process's memmory segment - 2)
+				JNZ INCREMENT
+			JMP Find
+		Found:
+			PUSH H
+			MVI B, 0
+			INCREMENT:
+				MOV A, B
+				INX H
+				ADI 1
+				CPI (sizeof a process's memmory segment - 2)
+				JNZ INCREMENT
+			MOV M, D
+			INX H
+			MOV M, E
+
+			POP H
+			MOV D, B
+			MOV E, C
+			XCHG
+			MOV M, D
+			INX H
+			MOV M, E
+		;Fill process table of the adding process.
+		;DE ----- STARTING POINT OF NEW PROCESS IN PROCESS TABLE
+		POP B
+	EI
+	return
+
+init:
+	DI
+		LXI H, 1024
+		SPHL
+		MVI M, 0	;<- A
+		INX H
+		MVI M, 0	;<- B
+		INX H
+		MVI M, 0	;<- C
+		INX H
+		MVI M, 0	;<- D
+		INX H
+		MVI M, 0	;<- E
+		INX H
+		MVI M, 0	;<- H
+		INX H
+		MVI M, 0	;<- L
+		INX H
+		MOV M, 0 	;<- SP H
+		INX H
+		MOV M, 0	;<- SP L
+		INX H
+		MVI M, 0	;<- PC H
+		INX H
+		MVI M, 0	;<- PC L
+		INX H
+		MVI M, 0	;<- BASE H
+		INX H
+		MVI M, 0	;<- BASE L
+		INX H
+		MVI M, 0	;<- STATE
+		INX H
+
+	EI
+
+
+clear_process:
