@@ -2,15 +2,24 @@ PRINT_STR	equ 1
 READ_MEM	equ 2
 PRINT_MEM	equ 3
 PRINT_B		equ 4
+LOAD_EXEC	equ 5
+SET_QUANTUM 	equ 6
 READ_B		equ 7
 READ_STR	equ 8
+PROCESS_EXIT	equ 9
 
+
+
+nameinit:   dw 'init',00H
 sum:        dw 'Sum.com',00H 
 primes:     dw 'Primes.com',00H
 collatz:    dw 'Collatz.com',00H
 
 
-Scheudler: ORG 2; pc = 2
+Begin: Org 0 
+	JMP init
+
+Scheudler: ORG 28 ; pc = 2
     DI
         LXI H, 10AH
         MOV B, M
@@ -165,6 +174,13 @@ init: ORG 200H
         MOV M, B
         INX H
         MOV M, C
+        INX H               ; PROCESS ID
+        MOV M, C            ; 0 INIT
+        INX H               ; PROCESS NAME H
+        LXI D, nameinit
+        MOV M, D 
+        INX H               ; PROCESS NAME L
+        MOV M, E
         LXI H, 3FFH
         SPHL
     EI
@@ -174,7 +190,63 @@ init: ORG 200H
     PUSH H
     LXI H, collatz
     PUSH H
-    MOV A, 0
+    MVI B, 1
+    WHILE:
+        MVI A, 3
+        CMP B
+        JZ ADDED
+
+        MVI D, 2
+        
+        SEARCH:
+            INR D
+            LDAX D
+            MOV E, A
+            DCR D
+            CMP D
+            JNZ SEARCH
+            JNC SEARCH
+            FOUND:
+                INR D           ; NEXT PROCESS POINTER
+                MOV H, D
+                MVI L, 0
+                INR D           ; NEXT PROCESS SLOT
+                MOV M, D        ; NEXT PROCESS -> NEXT PROCESS SLOT
+                INR D           ; NEXT_NEXT PROCESS POINTER H
+                MOV H, D
+                MOV M, E        ; PRE-NEXT PROCESS
+                INX H           ; NEXT PROCESS LOW
+                INX H           ; PROCESS ID
+                MOV M, B        ; COUNTER 
+
+                POP D			; FILENAME
+                INX H           : PROCESS NAME H
+                MOV M, D		
+                INX H           ; PROCESS NAME L
+				MOV M, E
+				INR B
+				MOV L, B
+				MOV B, D
+				MOV C, E
+				MOV D, L
+				MVI L, 0
+				DCR H
+				MVI A, LOAD_EXEC
+				PUSH D
+				NOP
+				POP B
+				JMP WHILE
+
+ADDED:
+    MVI A, 2
+    LXI H, 300H
+    LOOP:
+        CMP M
+        JNZ LOOP
+    HLT
+
+
+
     
 
     
