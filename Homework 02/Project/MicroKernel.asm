@@ -17,9 +17,23 @@ collatz:    dw 'Collatz.com',00H
 
 
 Begin: Org 0 
-	JMP init
+	JMP INIT
 
-Scheudler: ORG 28 ; pc = 2
+ORG 07H
+GTU_OS:	PUSH D
+	push D
+	push H
+	push psw
+	nop	; This is where we run our OS in C++, see the CPU8080::isSystemCall()
+		; function for the detail.
+	pop psw
+	pop h
+	pop d
+	pop D
+	ret
+
+ORG 28H 
+Scheudler:              ; pc = 28
     DI
         LXI H, 10AH
         MOV B, M
@@ -92,9 +106,7 @@ Scheudler: ORG 28 ; pc = 2
             MOV M, A
         ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
         POP H
-        MVI A, 1
-        ADD H
-        MOV H, A        ; NEXT_NEXT POINTER H
+        INR H           ; NEXT_NEXT POINTER H
         INX H           ; NEXT_NEXT POINTER L
         INX H           ; NEXT_NEXT PROCESS ID 
         INX H           ; NEXT_NEXT PROCESS NAME H
@@ -129,7 +141,7 @@ Scheudler: ORG 28 ; pc = 2
 
         DCX H           ; D
         MOV D, M
-    PUSH D              ; DE
+        PUSH D          ; DE
 
         INX H           ; E
         INX H           ; H
@@ -137,37 +149,37 @@ Scheudler: ORG 28 ; pc = 2
 
         INX H           ; L
         MOV E, M        
-    PUSH D              ; HL
+        PUSH D          ; HL
 
         INX H           ; SP L
         INX H           ; SP H
         INX H           ; PC L
-        MOV D, M
+        MOV E, M
 
         INX H           ; PC H
-        MOV E, M       
-    PUSH D              ; PC
+        MOV D, M       
+        PUSH D          ; PC
 
         INX H           ; BASE L
         MOV D, M
 
         INX H           ; BASE H
         MOV E, M
-    PUSH D              ; BASE
+        PUSH D          ; BASE
 
         INX H           ; CC
-        MOV H, M        
-        MOV L, A
-    PUSH D              ; PSW
-    POP PSW
-    POP D               ; BASE
-    POP H               ; PC
+        MOV L, M        
+        MOV H, A
+        PUSH H          ; PSW
+        POP PSW         ; PSW
+        POP D           ; BASE
+        POP H           ; PC
     EI
     PCHL
 
 
-
-init: ORG 200H
+ORG 200H
+INIT: 
     DI
         LXI H, 300H
         LXI B, 200H
@@ -205,37 +217,43 @@ init: ORG 200H
             DCR D
             CMP D
             JNZ SEARCH
-            JNC SEARCH
+            JM SEARCH
             FOUND:
-                INR D           ; NEXT PROCESS POINTER
-                MOV H, D
-                MVI L, 0
-                INR D           ; NEXT PROCESS SLOT
-                MOV M, D        ; NEXT PROCESS -> NEXT PROCESS SLOT
-                INR D           ; NEXT_NEXT PROCESS POINTER H
-                MOV H, D
-                MOV M, E        ; PRE-NEXT PROCESS
-                INX H           ; NEXT PROCESS LOW
-                INX H           ; PROCESS ID
-                MOV M, B        ; COUNTER 
+                    INR D           ; NEXT PROCESS POINTER
+                    INR D           ; ADDING PROCESS DATA
+                    INR D           ; ADDING PROCESS'S NEXT PROCESS
+                    MOV H, D
+                    MVI L, 0
+                    MOV M, E        ; PRE-NEXT * -> NEXT_NEXT * HIGH
+                    INX H
+                    MVI M, 0        ; LOW
+                    INX H
+                    MOV M, B        ; ID
+                    MOV A, B
+                    POP B
+                    INX H           ; NAME P HIGH
+                    MOV M, B
+                    INX H           ; NAME P LOW
+                    MOV M, C
+                    MVI L, 13       ; STACK P HIGH
+                    MOV M, H        
+                    DCX H           ; STACK P LOW
+                    MVI M, 255
+                    
+                    DCR D           ; ADDING PROCESS DATA
+                    MOV H, D        ;
+                    MVI L, 0        ;
 
-                POP D			; FILENAME
-                INX H           : PROCESS NAME H
-                MOV M, D		
-                INX H           ; PROCESS NAME L
-				MOV M, E
-				INR B
-				MOV L, B
-				MOV B, D
-				MOV C, E
-				MOV D, L
-				MVI L, 0
-				DCR H
-				MVI A, LOAD_EXEC
-				PUSH D
-				NOP
-				POP B
-				JMP WHILE
+                    MOV E, A
+                    PUSH D
+                    MVI A, LOAD_EXEC
+                    CALL GTU_OS     ; READ PROCESS FROM MEMORY
+                    POP D
+                    MOV B, E
+                    INR B
+                    DCR H
+                    MOV M, D
+                    JMP WHILE
 
 ADDED:
     MVI A, 2
