@@ -15,22 +15,12 @@ sum:        dw 'Sum.com',00H
 primes:     dw 'Primes.com',00H
 collatz:    dw 'Collatz.com',00H
 
-
-Begin: Org 0 
+Begin: Org 0
 	JMP INIT
 
 ORG 07H
-GTU_OS:	PUSH D
-	push D
-	push H
-	push psw
-	nop	; This is where we run our OS in C++, see the CPU8080::isSystemCall()
-		; function for the detail.
-	pop psw
-	pop h
-	pop d
-	pop D
-	ret
+GTU_OS: 
+    ret
 
 ORG 28H 
 Scheudler:              ; pc = 28
@@ -209,7 +199,7 @@ INIT:
         JZ ADDED
 
         MVI D, 2
-        
+        MVI E, 0
         SEARCH:
             INR D
             LDAX D
@@ -239,14 +229,21 @@ INIT:
                     MOV M, H        
                     DCX H           ; STACK P LOW
                     MVI M, 255
-                    
+
                     DCR D           ; ADDING PROCESS DATA
+                    MVI L, 15
+                    MOV M, D
+                    DCX H
+                    MVI M, 0
+
                     MOV H, D        ;
                     MVI L, 0        ;
 
                     MOV E, A
                     PUSH D
                     MVI A, LOAD_EXEC
+                    DI
+                    EI
                     CALL GTU_OS     ; READ PROCESS FROM MEMORY
                     POP D
                     MOV B, E

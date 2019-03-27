@@ -1,0 +1,1714 @@
+0000 0000 JMP    $0200   	.....  A $00 B $00 C $00 D $00 E $00 H $00 L $00 SP 0000
+Scheduler Timer is: 10
+
+
+
+
+
+0000 0200 DI             	.....  A $00 B $00 C $00 D $00 E $00 H $00 L $00 SP 0000
+0000 0201 LXI    H,#$0300	.....  A $00 B $00 C $00 D $00 E $00 H $03 L $00 SP 0000
+0000 0204 LXI    B,#$0200	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $00 SP 0000
+0000 0207 MOV    M,B     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $00 SP 0000
+0000 0208 INX    H       	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $01 SP 0000
+0000 0209 MOV    M,C     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $01 SP 0000
+0000 020a INX    H       	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $02 SP 0000
+0000 020b MOV    M,C     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $02 SP 0000
+0000 020c INX    H       	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $03 SP 0000
+0000 020d LXI    D,#$0000	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $03 SP 0000
+0000 0210 MOV    M,D     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $03 SP 0000
+0000 0211 INX    H       	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $04 SP 0000
+0000 0212 MOV    M.E     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $04 SP 0000
+0000 0213 LXI    H,#$03ff	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $ff SP 0000
+0000 0216 SPHL           	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $ff SP 03ff
+0000 0217 EI             	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $ff SP 03ff
+
+
+
+
+
+Scheduler Timer is: 4
+0000 0218 LXI    H,#$0006	.....  A $00 B $02 C $00 D $00 E $00 H $00 L $06 SP 03ff
+Scheduler Timer is: 14
+0000 021b PUSH   H       	.....  A $00 B $02 C $00 D $00 E $00 H $00 L $06 SP 03fd
+Scheduler Timer is: 25
+0000 021c LXI    H,#$000f	.....  A $00 B $02 C $00 D $00 E $00 H $00 L $0f SP 03fd
+Scheduler Timer is: 35
+0000 021f PUSH   H       	.....  A $00 B $02 C $00 D $00 E $00 H $00 L $0f SP 03fb
+Scheduler Timer is: 46
+0000 0220 LXI    H,#$001b	.....  A $00 B $02 C $00 D $00 E $00 H $00 L $1b SP 03fb
+Scheduler Timer is: 56
+0000 0223 PUSH   H       	.....  A $00 B $02 C $00 D $00 E $00 H $00 L $1b SP 03f9
+Scheduler Timer is: 67
+0000 0224 MVI    B,#$01  	.....  A $00 B $01 C $00 D $00 E $00 H $00 L $1b SP 03f9
+Scheduler Timer is: 74
+0000 0226 MVI    A,#$03  	.....  A $03 B $01 C $00 D $00 E $00 H $00 L $1b SP 03f9
+Scheduler Timer is: 81
+Interrupt: 81
+	.....  A $03 B $01 C $00 D $00 E $00 H $00 L $1b SP 03f7
+Scheduler Timer is: 11
+
+
+
+
+
+0000 0028 DI             	.....  A $03 B $01 C $00 D $00 E $00 H $00 L $1b SP 03f7
+0000 0029 LXI    H,#$010a	.....  A $03 B $01 C $00 D $00 E $00 H $01 L $0a SP 03f7
+0000 002c MOV    B,M     	.....  A $03 B $02 C $00 D $00 E $00 H $01 L $0a SP 03f7
+0000 002d MVI    C,#$ff  	.....  A $03 B $02 C $ff D $00 E $00 H $01 L $0a SP 03f7
+0000 002f INX    B       	.....  A $03 B $03 C $00 D $00 E $00 H $01 L $0a SP 03f7
+0000 0030 MOV    H,B     	.....  A $03 B $03 C $00 D $00 E $00 H $03 L $0a SP 03f7
+0000 0031 MOV    L,C     	.....  A $03 B $03 C $00 D $00 E $00 H $03 L $00 SP 03f7
+0000 0032 MOV    B,M     	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $00 SP 03f7
+0000 0033 INX    H       	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $01 SP 03f7
+0000 0034 MOV    C,M     	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $01 SP 03f7
+0000 0035 PUSH   B       	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $01 SP 03f5
+0000 0036 INX    H       	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $02 SP 03f5
+0000 0037 INX    H       	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $03 SP 03f5
+0000 0038 INX    H       	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $04 SP 03f5
+0000 0039 INX    H       	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $05 SP 03f5
+0000 003a LDA    $0100   	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $05 SP 03f5
+0000 003d MOV    M,A     	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $05 SP 03f5
+0000 003e INX    H       	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $06 SP 03f5
+0000 003f LDA    $0101   	.....  A $01 B $02 C $00 D $00 E $00 H $03 L $06 SP 03f5
+0000 0042 MOV    M,A     	.....  A $01 B $02 C $00 D $00 E $00 H $03 L $06 SP 03f5
+0000 0043 INX    H       	.....  A $01 B $02 C $00 D $00 E $00 H $03 L $07 SP 03f5
+0000 0044 LDA    $0102   	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $07 SP 03f5
+0000 0047 MOV    M,A     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $07 SP 03f5
+0000 0048 INX    H       	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $08 SP 03f5
+0000 0049 LDA    $0103   	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $08 SP 03f5
+0000 004c MOV    M,A     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $08 SP 03f5
+0000 004d INX    H       	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $09 SP 03f5
+0000 004e LDA    $0104   	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $09 SP 03f5
+0000 0051 MOV    M,A     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $09 SP 03f5
+0000 0052 INX    H       	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $0a SP 03f5
+0000 0053 LDA    $0105   	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $0a SP 03f5
+0000 0056 MOV    M,A     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $0a SP 03f5
+0000 0057 INX    H       	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $0b SP 03f5
+0000 0058 LDA    $0106   	.....  A $1b B $02 C $00 D $00 E $00 H $03 L $0b SP 03f5
+0000 005b MOV    M,A     	.....  A $1b B $02 C $00 D $00 E $00 H $03 L $0b SP 03f5
+0000 005c INX    H       	.....  A $1b B $02 C $00 D $00 E $00 H $03 L $0c SP 03f5
+0000 005d LDA    $0107   	.....  A $f9 B $02 C $00 D $00 E $00 H $03 L $0c SP 03f5
+0000 0060 MOV    M,A     	.....  A $f9 B $02 C $00 D $00 E $00 H $03 L $0c SP 03f5
+0000 0061 INX    H       	.....  A $f9 B $02 C $00 D $00 E $00 H $03 L $0d SP 03f5
+0000 0062 LDA    $0108   	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $0d SP 03f5
+0000 0065 MOV    M,A     	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $0d SP 03f5
+0000 0066 INX    H       	.....  A $03 B $02 C $00 D $00 E $00 H $03 L $0e SP 03f5
+0000 0067 LDA    $0109   	.....  A $28 B $02 C $00 D $00 E $00 H $03 L $0e SP 03f5
+0000 006a MOV    M,A     	.....  A $28 B $02 C $00 D $00 E $00 H $03 L $0e SP 03f5
+0000 006b INX    H       	.....  A $28 B $02 C $00 D $00 E $00 H $03 L $0f SP 03f5
+0000 006c LDA    $010a   	.....  A $02 B $02 C $00 D $00 E $00 H $03 L $0f SP 03f5
+0000 006f MOV    M,A     	.....  A $02 B $02 C $00 D $00 E $00 H $03 L $0f SP 03f5
+0000 0070 INX    H       	.....  A $02 B $02 C $00 D $00 E $00 H $03 L $10 SP 03f5
+0000 0071 LDA    $010b   	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $10 SP 03f5
+0000 0074 MOV    M,A     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $10 SP 03f5
+0000 0075 INX    H       	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $11 SP 03f5
+0000 0076 LDA    $010c   	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $11 SP 03f5
+0000 0079 MOV    M,A     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $11 SP 03f5
+0000 007a INX    H       	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $12 SP 03f5
+0000 007b LDA    $010d   	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $12 SP 03f5
+0000 007e MOV    M,A     	.....  A $00 B $02 C $00 D $00 E $00 H $03 L $12 SP 03f5
+0000 007f POP    H       	.....  A $00 B $02 C $00 D $00 E $00 H $02 L $00 SP 03f7
+0000 0080 INR    H       	..p..  A $00 B $02 C $00 D $00 E $00 H $03 L $00 SP 03f7
+0000 0081 INX    H       	..p..  A $00 B $02 C $00 D $00 E $00 H $03 L $01 SP 03f7
+0000 0082 INX    H       	..p..  A $00 B $02 C $00 D $00 E $00 H $03 L $02 SP 03f7
+0000 0083 INX    H       	..p..  A $00 B $02 C $00 D $00 E $00 H $03 L $03 SP 03f7
+0000 0084 INX    H       	..p..  A $00 B $02 C $00 D $00 E $00 H $03 L $04 SP 03f7
+0000 0085 INX    H       	..p..  A $00 B $02 C $00 D $00 E $00 H $03 L $05 SP 03f7
+0000 0086 MOV    A,M     	..p..  A $03 B $02 C $00 D $00 E $00 H $03 L $05 SP 03f7
+0000 0087 INX    H       	..p..  A $03 B $02 C $00 D $00 E $00 H $03 L $06 SP 03f7
+0000 0088 MOV    B,M     	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $06 SP 03f7
+0000 0089 INX    H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $07 SP 03f7
+0000 008a MOV    C,M     	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $07 SP 03f7
+0000 008b INX    H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $08 SP 03f7
+0000 008c INX    H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $09 SP 03f7
+0000 008d INX    H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $0a SP 03f7
+0000 008e INX    H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $0b SP 03f7
+0000 008f INX    H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $0c SP 03f7
+0000 0090 MOV    E,M     	..p..  A $03 B $01 C $00 D $00 E $f9 H $03 L $0c SP 03f7
+0000 0091 INX    H       	..p..  A $03 B $01 C $00 D $00 E $f9 H $03 L $0d SP 03f7
+0000 0092 MOV    D,M     	..p..  A $03 B $01 C $00 D $03 E $f9 H $03 L $0d SP 03f7
+0000 0093 XCHG           	..p..  A $03 B $01 C $00 D $03 E $0d H $03 L $f9 SP 03f7
+0000 0094 SPHL           	..p..  A $03 B $01 C $00 D $03 E $0d H $03 L $f9 SP 03f9
+0000 0095 XCHG           	..p..  A $03 B $01 C $00 D $03 E $f9 H $03 L $0d SP 03f9
+0000 0096 DCX    H       	..p..  A $03 B $01 C $00 D $03 E $f9 H $03 L $0c SP 03f9
+0000 0097 DCX    H       	..p..  A $03 B $01 C $00 D $03 E $f9 H $03 L $0b SP 03f9
+0000 0098 DCX    H       	..p..  A $03 B $01 C $00 D $03 E $f9 H $03 L $0a SP 03f9
+0000 0099 DCX    H       	..p..  A $03 B $01 C $00 D $03 E $f9 H $03 L $09 SP 03f9
+0000 009a MOV    E,M     	..p..  A $03 B $01 C $00 D $03 E $00 H $03 L $09 SP 03f9
+0000 009b DCX    H       	..p..  A $03 B $01 C $00 D $03 E $00 H $03 L $08 SP 03f9
+0000 009c MOV    D,M     	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $08 SP 03f9
+0000 009d PUSH   D       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $08 SP 03f7
+0000 009e INX    H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $09 SP 03f7
+0000 009f INX    H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $0a SP 03f7
+0000 00a0 MOV    D,M     	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $0a SP 03f7
+0000 00a1 INX    H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $0b SP 03f7
+0000 00a2 MOV    E,M     	..p..  A $03 B $01 C $00 D $00 E $1b H $03 L $0b SP 03f7
+0000 00a3 PUSH   D       	..p..  A $03 B $01 C $00 D $00 E $1b H $03 L $0b SP 03f5
+0000 00a4 INX    H       	..p..  A $03 B $01 C $00 D $00 E $1b H $03 L $0c SP 03f5
+0000 00a5 INX    H       	..p..  A $03 B $01 C $00 D $00 E $1b H $03 L $0d SP 03f5
+0000 00a6 INX    H       	..p..  A $03 B $01 C $00 D $00 E $1b H $03 L $0e SP 03f5
+0000 00a7 MOV    E,M     	..p..  A $03 B $01 C $00 D $00 E $28 H $03 L $0e SP 03f5
+0000 00a8 INX    H       	..p..  A $03 B $01 C $00 D $00 E $28 H $03 L $0f SP 03f5
+0000 00a9 MOV    D,M     	..p..  A $03 B $01 C $00 D $02 E $28 H $03 L $0f SP 03f5
+0000 00aa PUSH   D       	..p..  A $03 B $01 C $00 D $02 E $28 H $03 L $0f SP 03f3
+0000 00ab INX    H       	..p..  A $03 B $01 C $00 D $02 E $28 H $03 L $10 SP 03f3
+0000 00ac MOV    D,M     	..p..  A $03 B $01 C $00 D $00 E $28 H $03 L $10 SP 03f3
+0000 00ad INX    H       	..p..  A $03 B $01 C $00 D $00 E $28 H $03 L $11 SP 03f3
+0000 00ae MOV    E,M     	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $11 SP 03f3
+0000 00af PUSH   D       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $11 SP 03f1
+0000 00b0 INX    H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $12 SP 03f1
+0000 00b1 MOV    L,M     	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $00 SP 03f1
+0000 00b2 MOV    H,A     	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $00 SP 03f1
+0000 00b3 PUSH   H       	..p..  A $03 B $01 C $00 D $00 E $00 H $03 L $00 SP 03ef
+0000 00b4 POP    PSW     	.....  A $03 B $01 C $00 D $00 E $00 H $03 L $00 SP 03f1
+0000 00b5 POP    D       	.....  A $03 B $01 C $00 D $00 E $00 H $03 L $00 SP 03f3
+0000 00b6 POP    H       	.....  A $03 B $01 C $00 D $00 E $00 H $02 L $28 SP 03f5
+0000 00b7 EI             	.....  A $03 B $01 C $00 D $00 E $00 H $02 L $28 SP 03f5
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	.....  A $03 B $01 C $00 D $00 E $00 H $00 L $1b SP 03f9
+Scheduler Timer is: 9
+0000 0228 CMP    B       	.....  A $03 B $01 C $00 D $00 E $00 H $00 L $1b SP 03f9
+Scheduler Timer is: 13
+0000 0229 JZ     $026e   	.....  A $03 B $01 C $00 D $00 E $00 H $00 L $1b SP 03f9
+Scheduler Timer is: 23
+0000 022c MVI    D,#$02  	.....  A $03 B $01 C $00 D $02 E $00 H $00 L $1b SP 03f9
+Scheduler Timer is: 30
+0000 022e MVI    E,#$00  	.....  A $03 B $01 C $00 D $02 E $00 H $00 L $1b SP 03f9
+Scheduler Timer is: 37
+0000 0230 INR    D       	..p..  A $03 B $01 C $00 D $03 E $00 H $00 L $1b SP 03f9
+Scheduler Timer is: 42
+0000 0231 LDAX   D       	..p..  A $02 B $01 C $00 D $03 E $00 H $00 L $1b SP 03f9
+Scheduler Timer is: 49
+0000 0232 MOV    E,A     	..p..  A $02 B $01 C $00 D $03 E $02 H $00 L $1b SP 03f9
+Scheduler Timer is: 54
+0000 0233 DCR    D       	.....  A $02 B $01 C $00 D $02 E $02 H $00 L $1b SP 03f9
+Scheduler Timer is: 59
+0000 0234 CMP    D       	z.p..  A $02 B $01 C $00 D $02 E $02 H $00 L $1b SP 03f9
+Scheduler Timer is: 63
+0000 0235 JNZ    $0230   	z.p..  A $02 B $01 C $00 D $02 E $02 H $00 L $1b SP 03f9
+Scheduler Timer is: 73
+0000 0238 JM     $0230   	z.p..  A $02 B $01 C $00 D $02 E $02 H $00 L $1b SP 03f9
+Scheduler Timer is: 83
+Interrupt: 83
+	z.p..  A $02 B $01 C $00 D $02 E $02 H $00 L $1b SP 03f7
+Scheduler Timer is: 11
+
+
+
+
+
+0000 0028 DI             	z.p..  A $02 B $01 C $00 D $02 E $02 H $00 L $1b SP 03f7
+0000 0029 LXI    H,#$010a	z.p..  A $02 B $01 C $00 D $02 E $02 H $01 L $0a SP 03f7
+0000 002c MOV    B,M     	z.p..  A $02 B $02 C $00 D $02 E $02 H $01 L $0a SP 03f7
+0000 002d MVI    C,#$ff  	z.p..  A $02 B $02 C $ff D $02 E $02 H $01 L $0a SP 03f7
+0000 002f INX    B       	z.p..  A $02 B $03 C $00 D $02 E $02 H $01 L $0a SP 03f7
+0000 0030 MOV    H,B     	z.p..  A $02 B $03 C $00 D $02 E $02 H $03 L $0a SP 03f7
+0000 0031 MOV    L,C     	z.p..  A $02 B $03 C $00 D $02 E $02 H $03 L $00 SP 03f7
+0000 0032 MOV    B,M     	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $00 SP 03f7
+0000 0033 INX    H       	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $01 SP 03f7
+0000 0034 MOV    C,M     	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $01 SP 03f7
+0000 0035 PUSH   B       	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $01 SP 03f5
+0000 0036 INX    H       	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $02 SP 03f5
+0000 0037 INX    H       	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $03 SP 03f5
+0000 0038 INX    H       	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $04 SP 03f5
+0000 0039 INX    H       	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $05 SP 03f5
+0000 003a LDA    $0100   	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $05 SP 03f5
+0000 003d MOV    M,A     	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $05 SP 03f5
+0000 003e INX    H       	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $06 SP 03f5
+0000 003f LDA    $0101   	z.p..  A $01 B $02 C $00 D $02 E $02 H $03 L $06 SP 03f5
+0000 0042 MOV    M,A     	z.p..  A $01 B $02 C $00 D $02 E $02 H $03 L $06 SP 03f5
+0000 0043 INX    H       	z.p..  A $01 B $02 C $00 D $02 E $02 H $03 L $07 SP 03f5
+0000 0044 LDA    $0102   	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $07 SP 03f5
+0000 0047 MOV    M,A     	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $07 SP 03f5
+0000 0048 INX    H       	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $08 SP 03f5
+0000 0049 LDA    $0103   	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $08 SP 03f5
+0000 004c MOV    M,A     	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $08 SP 03f5
+0000 004d INX    H       	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $09 SP 03f5
+0000 004e LDA    $0104   	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $09 SP 03f5
+0000 0051 MOV    M,A     	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $09 SP 03f5
+0000 0052 INX    H       	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $0a SP 03f5
+0000 0053 LDA    $0105   	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $0a SP 03f5
+0000 0056 MOV    M,A     	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $0a SP 03f5
+0000 0057 INX    H       	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $0b SP 03f5
+0000 0058 LDA    $0106   	z.p..  A $1b B $02 C $00 D $02 E $02 H $03 L $0b SP 03f5
+0000 005b MOV    M,A     	z.p..  A $1b B $02 C $00 D $02 E $02 H $03 L $0b SP 03f5
+0000 005c INX    H       	z.p..  A $1b B $02 C $00 D $02 E $02 H $03 L $0c SP 03f5
+0000 005d LDA    $0107   	z.p..  A $f9 B $02 C $00 D $02 E $02 H $03 L $0c SP 03f5
+0000 0060 MOV    M,A     	z.p..  A $f9 B $02 C $00 D $02 E $02 H $03 L $0c SP 03f5
+0000 0061 INX    H       	z.p..  A $f9 B $02 C $00 D $02 E $02 H $03 L $0d SP 03f5
+0000 0062 LDA    $0108   	z.p..  A $03 B $02 C $00 D $02 E $02 H $03 L $0d SP 03f5
+0000 0065 MOV    M,A     	z.p..  A $03 B $02 C $00 D $02 E $02 H $03 L $0d SP 03f5
+0000 0066 INX    H       	z.p..  A $03 B $02 C $00 D $02 E $02 H $03 L $0e SP 03f5
+0000 0067 LDA    $0109   	z.p..  A $3b B $02 C $00 D $02 E $02 H $03 L $0e SP 03f5
+0000 006a MOV    M,A     	z.p..  A $3b B $02 C $00 D $02 E $02 H $03 L $0e SP 03f5
+0000 006b INX    H       	z.p..  A $3b B $02 C $00 D $02 E $02 H $03 L $0f SP 03f5
+0000 006c LDA    $010a   	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $0f SP 03f5
+0000 006f MOV    M,A     	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $0f SP 03f5
+0000 0070 INX    H       	z.p..  A $02 B $02 C $00 D $02 E $02 H $03 L $10 SP 03f5
+0000 0071 LDA    $010b   	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $10 SP 03f5
+0000 0074 MOV    M,A     	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $10 SP 03f5
+0000 0075 INX    H       	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $11 SP 03f5
+0000 0076 LDA    $010c   	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $11 SP 03f5
+0000 0079 MOV    M,A     	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $11 SP 03f5
+0000 007a INX    H       	z.p..  A $00 B $02 C $00 D $02 E $02 H $03 L $12 SP 03f5
+0000 007b LDA    $010d   	z.p..  A $44 B $02 C $00 D $02 E $02 H $03 L $12 SP 03f5
+0000 007e MOV    M,A     	z.p..  A $44 B $02 C $00 D $02 E $02 H $03 L $12 SP 03f5
+0000 007f POP    H       	z.p..  A $44 B $02 C $00 D $02 E $02 H $02 L $00 SP 03f7
+0000 0080 INR    H       	..p..  A $44 B $02 C $00 D $02 E $02 H $03 L $00 SP 03f7
+0000 0081 INX    H       	..p..  A $44 B $02 C $00 D $02 E $02 H $03 L $01 SP 03f7
+0000 0082 INX    H       	..p..  A $44 B $02 C $00 D $02 E $02 H $03 L $02 SP 03f7
+0000 0083 INX    H       	..p..  A $44 B $02 C $00 D $02 E $02 H $03 L $03 SP 03f7
+0000 0084 INX    H       	..p..  A $44 B $02 C $00 D $02 E $02 H $03 L $04 SP 03f7
+0000 0085 INX    H       	..p..  A $44 B $02 C $00 D $02 E $02 H $03 L $05 SP 03f7
+0000 0086 MOV    A,M     	..p..  A $02 B $02 C $00 D $02 E $02 H $03 L $05 SP 03f7
+0000 0087 INX    H       	..p..  A $02 B $02 C $00 D $02 E $02 H $03 L $06 SP 03f7
+0000 0088 MOV    B,M     	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $06 SP 03f7
+0000 0089 INX    H       	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $07 SP 03f7
+0000 008a MOV    C,M     	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $07 SP 03f7
+0000 008b INX    H       	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $08 SP 03f7
+0000 008c INX    H       	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $09 SP 03f7
+0000 008d INX    H       	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $0a SP 03f7
+0000 008e INX    H       	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $0b SP 03f7
+0000 008f INX    H       	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $0c SP 03f7
+0000 0090 MOV    E,M     	..p..  A $02 B $01 C $00 D $02 E $f9 H $03 L $0c SP 03f7
+0000 0091 INX    H       	..p..  A $02 B $01 C $00 D $02 E $f9 H $03 L $0d SP 03f7
+0000 0092 MOV    D,M     	..p..  A $02 B $01 C $00 D $03 E $f9 H $03 L $0d SP 03f7
+0000 0093 XCHG           	..p..  A $02 B $01 C $00 D $03 E $0d H $03 L $f9 SP 03f7
+0000 0094 SPHL           	..p..  A $02 B $01 C $00 D $03 E $0d H $03 L $f9 SP 03f9
+0000 0095 XCHG           	..p..  A $02 B $01 C $00 D $03 E $f9 H $03 L $0d SP 03f9
+0000 0096 DCX    H       	..p..  A $02 B $01 C $00 D $03 E $f9 H $03 L $0c SP 03f9
+0000 0097 DCX    H       	..p..  A $02 B $01 C $00 D $03 E $f9 H $03 L $0b SP 03f9
+0000 0098 DCX    H       	..p..  A $02 B $01 C $00 D $03 E $f9 H $03 L $0a SP 03f9
+0000 0099 DCX    H       	..p..  A $02 B $01 C $00 D $03 E $f9 H $03 L $09 SP 03f9
+0000 009a MOV    E,M     	..p..  A $02 B $01 C $00 D $03 E $02 H $03 L $09 SP 03f9
+0000 009b DCX    H       	..p..  A $02 B $01 C $00 D $03 E $02 H $03 L $08 SP 03f9
+0000 009c MOV    D,M     	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $08 SP 03f9
+0000 009d PUSH   D       	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $08 SP 03f7
+0000 009e INX    H       	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $09 SP 03f7
+0000 009f INX    H       	..p..  A $02 B $01 C $00 D $02 E $02 H $03 L $0a SP 03f7
+0000 00a0 MOV    D,M     	..p..  A $02 B $01 C $00 D $00 E $02 H $03 L $0a SP 03f7
+0000 00a1 INX    H       	..p..  A $02 B $01 C $00 D $00 E $02 H $03 L $0b SP 03f7
+0000 00a2 MOV    E,M     	..p..  A $02 B $01 C $00 D $00 E $1b H $03 L $0b SP 03f7
+0000 00a3 PUSH   D       	..p..  A $02 B $01 C $00 D $00 E $1b H $03 L $0b SP 03f5
+0000 00a4 INX    H       	..p..  A $02 B $01 C $00 D $00 E $1b H $03 L $0c SP 03f5
+0000 00a5 INX    H       	..p..  A $02 B $01 C $00 D $00 E $1b H $03 L $0d SP 03f5
+0000 00a6 INX    H       	..p..  A $02 B $01 C $00 D $00 E $1b H $03 L $0e SP 03f5
+0000 00a7 MOV    E,M     	..p..  A $02 B $01 C $00 D $00 E $3b H $03 L $0e SP 03f5
+0000 00a8 INX    H       	..p..  A $02 B $01 C $00 D $00 E $3b H $03 L $0f SP 03f5
+0000 00a9 MOV    D,M     	..p..  A $02 B $01 C $00 D $02 E $3b H $03 L $0f SP 03f5
+0000 00aa PUSH   D       	..p..  A $02 B $01 C $00 D $02 E $3b H $03 L $0f SP 03f3
+0000 00ab INX    H       	..p..  A $02 B $01 C $00 D $02 E $3b H $03 L $10 SP 03f3
+0000 00ac MOV    D,M     	..p..  A $02 B $01 C $00 D $00 E $3b H $03 L $10 SP 03f3
+0000 00ad INX    H       	..p..  A $02 B $01 C $00 D $00 E $3b H $03 L $11 SP 03f3
+0000 00ae MOV    E,M     	..p..  A $02 B $01 C $00 D $00 E $00 H $03 L $11 SP 03f3
+0000 00af PUSH   D       	..p..  A $02 B $01 C $00 D $00 E $00 H $03 L $11 SP 03f1
+0000 00b0 INX    H       	..p..  A $02 B $01 C $00 D $00 E $00 H $03 L $12 SP 03f1
+0000 00b1 MOV    L,M     	..p..  A $02 B $01 C $00 D $00 E $00 H $03 L $44 SP 03f1
+0000 00b2 MOV    H,A     	..p..  A $02 B $01 C $00 D $00 E $00 H $02 L $44 SP 03f1
+0000 00b3 PUSH   H       	..p..  A $02 B $01 C $00 D $00 E $00 H $02 L $44 SP 03ef
+0000 00b4 POP    PSW     	z.p..  A $02 B $01 C $00 D $00 E $00 H $02 L $44 SP 03f1
+0000 00b5 POP    D       	z.p..  A $02 B $01 C $00 D $00 E $00 H $02 L $44 SP 03f3
+0000 00b6 POP    H       	z.p..  A $02 B $01 C $00 D $00 E $00 H $02 L $3b SP 03f5
+0000 00b7 EI             	z.p..  A $02 B $01 C $00 D $00 E $00 H $02 L $3b SP 03f5
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	z.p..  A $02 B $01 C $00 D $02 E $02 H $00 L $1b SP 03f9
+Scheduler Timer is: 9
+0000 023b INR    D       	..p..  A $02 B $01 C $00 D $03 E $02 H $00 L $1b SP 03f9
+Scheduler Timer is: 14
+0000 023c INR    D       	.....  A $02 B $01 C $00 D $04 E $02 H $00 L $1b SP 03f9
+Scheduler Timer is: 19
+0000 023d INR    D       	..p..  A $02 B $01 C $00 D $05 E $02 H $00 L $1b SP 03f9
+Scheduler Timer is: 24
+0000 023e MOV    H,D     	..p..  A $02 B $01 C $00 D $05 E $02 H $05 L $1b SP 03f9
+Scheduler Timer is: 29
+0000 023f MVI    L,#$00  	..p..  A $02 B $01 C $00 D $05 E $02 H $05 L $00 SP 03f9
+Scheduler Timer is: 36
+0000 0241 MOV    M.E     	..p..  A $02 B $01 C $00 D $05 E $02 H $05 L $00 SP 03f9
+Scheduler Timer is: 43
+0000 0242 INX    H       	..p..  A $02 B $01 C $00 D $05 E $02 H $05 L $01 SP 03f9
+Scheduler Timer is: 48
+0000 0243 MVI    M,#$00  	..p..  A $02 B $01 C $00 D $05 E $02 H $05 L $01 SP 03f9
+Scheduler Timer is: 58
+0000 0245 INX    H       	..p..  A $02 B $01 C $00 D $05 E $02 H $05 L $02 SP 03f9
+Scheduler Timer is: 63
+0000 0246 MOV    M,B     	..p..  A $02 B $01 C $00 D $05 E $02 H $05 L $02 SP 03f9
+Scheduler Timer is: 70
+0000 0247 MOV    A,B     	..p..  A $01 B $01 C $00 D $05 E $02 H $05 L $02 SP 03f9
+Scheduler Timer is: 75
+0000 0248 POP    B       	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $02 SP 03fb
+Scheduler Timer is: 85
+Interrupt: 85
+	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $02 SP 03f9
+Scheduler Timer is: 11
+
+
+
+
+
+0000 0028 DI             	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $02 SP 03f9
+0000 0029 LXI    H,#$010a	..p..  A $01 B $00 C $1b D $05 E $02 H $01 L $0a SP 03f9
+0000 002c MOV    B,M     	..p..  A $01 B $02 C $1b D $05 E $02 H $01 L $0a SP 03f9
+0000 002d MVI    C,#$ff  	..p..  A $01 B $02 C $ff D $05 E $02 H $01 L $0a SP 03f9
+0000 002f INX    B       	..p..  A $01 B $03 C $00 D $05 E $02 H $01 L $0a SP 03f9
+0000 0030 MOV    H,B     	..p..  A $01 B $03 C $00 D $05 E $02 H $03 L $0a SP 03f9
+0000 0031 MOV    L,C     	..p..  A $01 B $03 C $00 D $05 E $02 H $03 L $00 SP 03f9
+0000 0032 MOV    B,M     	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $00 SP 03f9
+0000 0033 INX    H       	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $01 SP 03f9
+0000 0034 MOV    C,M     	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $01 SP 03f9
+0000 0035 PUSH   B       	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $01 SP 03f7
+0000 0036 INX    H       	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $02 SP 03f7
+0000 0037 INX    H       	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $03 SP 03f7
+0000 0038 INX    H       	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $04 SP 03f7
+0000 0039 INX    H       	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $05 SP 03f7
+0000 003a LDA    $0100   	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $05 SP 03f7
+0000 003d MOV    M,A     	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $05 SP 03f7
+0000 003e INX    H       	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $06 SP 03f7
+0000 003f LDA    $0101   	..p..  A $00 B $02 C $00 D $05 E $02 H $03 L $06 SP 03f7
+0000 0042 MOV    M,A     	..p..  A $00 B $02 C $00 D $05 E $02 H $03 L $06 SP 03f7
+0000 0043 INX    H       	..p..  A $00 B $02 C $00 D $05 E $02 H $03 L $07 SP 03f7
+0000 0044 LDA    $0102   	..p..  A $1b B $02 C $00 D $05 E $02 H $03 L $07 SP 03f7
+0000 0047 MOV    M,A     	..p..  A $1b B $02 C $00 D $05 E $02 H $03 L $07 SP 03f7
+0000 0048 INX    H       	..p..  A $1b B $02 C $00 D $05 E $02 H $03 L $08 SP 03f7
+0000 0049 LDA    $0103   	..p..  A $05 B $02 C $00 D $05 E $02 H $03 L $08 SP 03f7
+0000 004c MOV    M,A     	..p..  A $05 B $02 C $00 D $05 E $02 H $03 L $08 SP 03f7
+0000 004d INX    H       	..p..  A $05 B $02 C $00 D $05 E $02 H $03 L $09 SP 03f7
+0000 004e LDA    $0104   	..p..  A $02 B $02 C $00 D $05 E $02 H $03 L $09 SP 03f7
+0000 0051 MOV    M,A     	..p..  A $02 B $02 C $00 D $05 E $02 H $03 L $09 SP 03f7
+0000 0052 INX    H       	..p..  A $02 B $02 C $00 D $05 E $02 H $03 L $0a SP 03f7
+0000 0053 LDA    $0105   	..p..  A $05 B $02 C $00 D $05 E $02 H $03 L $0a SP 03f7
+0000 0056 MOV    M,A     	..p..  A $05 B $02 C $00 D $05 E $02 H $03 L $0a SP 03f7
+0000 0057 INX    H       	..p..  A $05 B $02 C $00 D $05 E $02 H $03 L $0b SP 03f7
+0000 0058 LDA    $0106   	..p..  A $02 B $02 C $00 D $05 E $02 H $03 L $0b SP 03f7
+0000 005b MOV    M,A     	..p..  A $02 B $02 C $00 D $05 E $02 H $03 L $0b SP 03f7
+0000 005c INX    H       	..p..  A $02 B $02 C $00 D $05 E $02 H $03 L $0c SP 03f7
+0000 005d LDA    $0107   	..p..  A $fb B $02 C $00 D $05 E $02 H $03 L $0c SP 03f7
+0000 0060 MOV    M,A     	..p..  A $fb B $02 C $00 D $05 E $02 H $03 L $0c SP 03f7
+0000 0061 INX    H       	..p..  A $fb B $02 C $00 D $05 E $02 H $03 L $0d SP 03f7
+0000 0062 LDA    $0108   	..p..  A $03 B $02 C $00 D $05 E $02 H $03 L $0d SP 03f7
+0000 0065 MOV    M,A     	..p..  A $03 B $02 C $00 D $05 E $02 H $03 L $0d SP 03f7
+0000 0066 INX    H       	..p..  A $03 B $02 C $00 D $05 E $02 H $03 L $0e SP 03f7
+0000 0067 LDA    $0109   	..p..  A $49 B $02 C $00 D $05 E $02 H $03 L $0e SP 03f7
+0000 006a MOV    M,A     	..p..  A $49 B $02 C $00 D $05 E $02 H $03 L $0e SP 03f7
+0000 006b INX    H       	..p..  A $49 B $02 C $00 D $05 E $02 H $03 L $0f SP 03f7
+0000 006c LDA    $010a   	..p..  A $02 B $02 C $00 D $05 E $02 H $03 L $0f SP 03f7
+0000 006f MOV    M,A     	..p..  A $02 B $02 C $00 D $05 E $02 H $03 L $0f SP 03f7
+0000 0070 INX    H       	..p..  A $02 B $02 C $00 D $05 E $02 H $03 L $10 SP 03f7
+0000 0071 LDA    $010b   	..p..  A $00 B $02 C $00 D $05 E $02 H $03 L $10 SP 03f7
+0000 0074 MOV    M,A     	..p..  A $00 B $02 C $00 D $05 E $02 H $03 L $10 SP 03f7
+0000 0075 INX    H       	..p..  A $00 B $02 C $00 D $05 E $02 H $03 L $11 SP 03f7
+0000 0076 LDA    $010c   	..p..  A $00 B $02 C $00 D $05 E $02 H $03 L $11 SP 03f7
+0000 0079 MOV    M,A     	..p..  A $00 B $02 C $00 D $05 E $02 H $03 L $11 SP 03f7
+0000 007a INX    H       	..p..  A $00 B $02 C $00 D $05 E $02 H $03 L $12 SP 03f7
+0000 007b LDA    $010d   	..p..  A $04 B $02 C $00 D $05 E $02 H $03 L $12 SP 03f7
+0000 007e MOV    M,A     	..p..  A $04 B $02 C $00 D $05 E $02 H $03 L $12 SP 03f7
+0000 007f POP    H       	..p..  A $04 B $02 C $00 D $05 E $02 H $02 L $00 SP 03f9
+0000 0080 INR    H       	..p..  A $04 B $02 C $00 D $05 E $02 H $03 L $00 SP 03f9
+0000 0081 INX    H       	..p..  A $04 B $02 C $00 D $05 E $02 H $03 L $01 SP 03f9
+0000 0082 INX    H       	..p..  A $04 B $02 C $00 D $05 E $02 H $03 L $02 SP 03f9
+0000 0083 INX    H       	..p..  A $04 B $02 C $00 D $05 E $02 H $03 L $03 SP 03f9
+0000 0084 INX    H       	..p..  A $04 B $02 C $00 D $05 E $02 H $03 L $04 SP 03f9
+0000 0085 INX    H       	..p..  A $04 B $02 C $00 D $05 E $02 H $03 L $05 SP 03f9
+0000 0086 MOV    A,M     	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $05 SP 03f9
+0000 0087 INX    H       	..p..  A $01 B $02 C $00 D $05 E $02 H $03 L $06 SP 03f9
+0000 0088 MOV    B,M     	..p..  A $01 B $00 C $00 D $05 E $02 H $03 L $06 SP 03f9
+0000 0089 INX    H       	..p..  A $01 B $00 C $00 D $05 E $02 H $03 L $07 SP 03f9
+0000 008a MOV    C,M     	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $07 SP 03f9
+0000 008b INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $08 SP 03f9
+0000 008c INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $09 SP 03f9
+0000 008d INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0a SP 03f9
+0000 008e INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0b SP 03f9
+0000 008f INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0c SP 03f9
+0000 0090 MOV    E,M     	..p..  A $01 B $00 C $1b D $05 E $fb H $03 L $0c SP 03f9
+0000 0091 INX    H       	..p..  A $01 B $00 C $1b D $05 E $fb H $03 L $0d SP 03f9
+0000 0092 MOV    D,M     	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $0d SP 03f9
+0000 0093 XCHG           	..p..  A $01 B $00 C $1b D $03 E $0d H $03 L $fb SP 03f9
+0000 0094 SPHL           	..p..  A $01 B $00 C $1b D $03 E $0d H $03 L $fb SP 03fb
+0000 0095 XCHG           	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $0d SP 03fb
+0000 0096 DCX    H       	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $0c SP 03fb
+0000 0097 DCX    H       	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $0b SP 03fb
+0000 0098 DCX    H       	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $0a SP 03fb
+0000 0099 DCX    H       	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $09 SP 03fb
+0000 009a MOV    E,M     	..p..  A $01 B $00 C $1b D $03 E $02 H $03 L $09 SP 03fb
+0000 009b DCX    H       	..p..  A $01 B $00 C $1b D $03 E $02 H $03 L $08 SP 03fb
+0000 009c MOV    D,M     	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $08 SP 03fb
+0000 009d PUSH   D       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $08 SP 03f9
+0000 009e INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $09 SP 03f9
+0000 009f INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0a SP 03f9
+0000 00a0 MOV    D,M     	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0a SP 03f9
+0000 00a1 INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0b SP 03f9
+0000 00a2 MOV    E,M     	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0b SP 03f9
+0000 00a3 PUSH   D       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0b SP 03f7
+0000 00a4 INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0c SP 03f7
+0000 00a5 INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0d SP 03f7
+0000 00a6 INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0e SP 03f7
+0000 00a7 MOV    E,M     	..p..  A $01 B $00 C $1b D $05 E $49 H $03 L $0e SP 03f7
+0000 00a8 INX    H       	..p..  A $01 B $00 C $1b D $05 E $49 H $03 L $0f SP 03f7
+0000 00a9 MOV    D,M     	..p..  A $01 B $00 C $1b D $02 E $49 H $03 L $0f SP 03f7
+0000 00aa PUSH   D       	..p..  A $01 B $00 C $1b D $02 E $49 H $03 L $0f SP 03f5
+0000 00ab INX    H       	..p..  A $01 B $00 C $1b D $02 E $49 H $03 L $10 SP 03f5
+0000 00ac MOV    D,M     	..p..  A $01 B $00 C $1b D $00 E $49 H $03 L $10 SP 03f5
+0000 00ad INX    H       	..p..  A $01 B $00 C $1b D $00 E $49 H $03 L $11 SP 03f5
+0000 00ae MOV    E,M     	..p..  A $01 B $00 C $1b D $00 E $00 H $03 L $11 SP 03f5
+0000 00af PUSH   D       	..p..  A $01 B $00 C $1b D $00 E $00 H $03 L $11 SP 03f3
+0000 00b0 INX    H       	..p..  A $01 B $00 C $1b D $00 E $00 H $03 L $12 SP 03f3
+0000 00b1 MOV    L,M     	..p..  A $01 B $00 C $1b D $00 E $00 H $03 L $04 SP 03f3
+0000 00b2 MOV    H,A     	..p..  A $01 B $00 C $1b D $00 E $00 H $01 L $04 SP 03f3
+0000 00b3 PUSH   H       	..p..  A $01 B $00 C $1b D $00 E $00 H $01 L $04 SP 03f1
+0000 00b4 POP    PSW     	..p..  A $01 B $00 C $1b D $00 E $00 H $01 L $04 SP 03f3
+0000 00b5 POP    D       	..p..  A $01 B $00 C $1b D $00 E $00 H $01 L $04 SP 03f5
+0000 00b6 POP    H       	..p..  A $01 B $00 C $1b D $00 E $00 H $02 L $49 SP 03f7
+0000 00b7 EI             	..p..  A $01 B $00 C $1b D $00 E $00 H $02 L $49 SP 03f7
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $02 SP 03fb
+Scheduler Timer is: 9
+0000 0249 INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $03 SP 03fb
+Scheduler Timer is: 14
+0000 024a MOV    M,B     	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $03 SP 03fb
+Scheduler Timer is: 21
+0000 024b INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $04 SP 03fb
+Scheduler Timer is: 26
+0000 024c MOV    M,C     	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $04 SP 03fb
+Scheduler Timer is: 33
+0000 024d MVI    L,#$0d  	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $0d SP 03fb
+Scheduler Timer is: 40
+0000 024f MOV    M,H     	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $0d SP 03fb
+Scheduler Timer is: 47
+0000 0250 DCX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $0c SP 03fb
+Scheduler Timer is: 52
+0000 0251 MVI    M,#$ff  	..p..  A $01 B $00 C $1b D $05 E $02 H $05 L $0c SP 03fb
+Scheduler Timer is: 62
+0000 0253 DCR    D       	.....  A $01 B $00 C $1b D $04 E $02 H $05 L $0c SP 03fb
+Scheduler Timer is: 67
+0000 0254 MVI    L,#$0f  	.....  A $01 B $00 C $1b D $04 E $02 H $05 L $0f SP 03fb
+Scheduler Timer is: 74
+0000 0256 MOV    M,D     	.....  A $01 B $00 C $1b D $04 E $02 H $05 L $0f SP 03fb
+Scheduler Timer is: 81
+Interrupt: 81
+	.....  A $01 B $00 C $1b D $04 E $02 H $05 L $0f SP 03f9
+Scheduler Timer is: 11
+
+
+
+
+
+0000 0028 DI             	.....  A $01 B $00 C $1b D $04 E $02 H $05 L $0f SP 03f9
+0000 0029 LXI    H,#$010a	.....  A $01 B $00 C $1b D $04 E $02 H $01 L $0a SP 03f9
+0000 002c MOV    B,M     	.....  A $01 B $02 C $1b D $04 E $02 H $01 L $0a SP 03f9
+0000 002d MVI    C,#$ff  	.....  A $01 B $02 C $ff D $04 E $02 H $01 L $0a SP 03f9
+0000 002f INX    B       	.....  A $01 B $03 C $00 D $04 E $02 H $01 L $0a SP 03f9
+0000 0030 MOV    H,B     	.....  A $01 B $03 C $00 D $04 E $02 H $03 L $0a SP 03f9
+0000 0031 MOV    L,C     	.....  A $01 B $03 C $00 D $04 E $02 H $03 L $00 SP 03f9
+0000 0032 MOV    B,M     	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $00 SP 03f9
+0000 0033 INX    H       	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $01 SP 03f9
+0000 0034 MOV    C,M     	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $01 SP 03f9
+0000 0035 PUSH   B       	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $01 SP 03f7
+0000 0036 INX    H       	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $02 SP 03f7
+0000 0037 INX    H       	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $03 SP 03f7
+0000 0038 INX    H       	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $04 SP 03f7
+0000 0039 INX    H       	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $05 SP 03f7
+0000 003a LDA    $0100   	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $05 SP 03f7
+0000 003d MOV    M,A     	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $05 SP 03f7
+0000 003e INX    H       	.....  A $01 B $02 C $00 D $04 E $02 H $03 L $06 SP 03f7
+0000 003f LDA    $0101   	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $06 SP 03f7
+0000 0042 MOV    M,A     	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $06 SP 03f7
+0000 0043 INX    H       	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $07 SP 03f7
+0000 0044 LDA    $0102   	.....  A $1b B $02 C $00 D $04 E $02 H $03 L $07 SP 03f7
+0000 0047 MOV    M,A     	.....  A $1b B $02 C $00 D $04 E $02 H $03 L $07 SP 03f7
+0000 0048 INX    H       	.....  A $1b B $02 C $00 D $04 E $02 H $03 L $08 SP 03f7
+0000 0049 LDA    $0103   	.....  A $04 B $02 C $00 D $04 E $02 H $03 L $08 SP 03f7
+0000 004c MOV    M,A     	.....  A $04 B $02 C $00 D $04 E $02 H $03 L $08 SP 03f7
+0000 004d INX    H       	.....  A $04 B $02 C $00 D $04 E $02 H $03 L $09 SP 03f7
+0000 004e LDA    $0104   	.....  A $02 B $02 C $00 D $04 E $02 H $03 L $09 SP 03f7
+0000 0051 MOV    M,A     	.....  A $02 B $02 C $00 D $04 E $02 H $03 L $09 SP 03f7
+0000 0052 INX    H       	.....  A $02 B $02 C $00 D $04 E $02 H $03 L $0a SP 03f7
+0000 0053 LDA    $0105   	.....  A $05 B $02 C $00 D $04 E $02 H $03 L $0a SP 03f7
+0000 0056 MOV    M,A     	.....  A $05 B $02 C $00 D $04 E $02 H $03 L $0a SP 03f7
+0000 0057 INX    H       	.....  A $05 B $02 C $00 D $04 E $02 H $03 L $0b SP 03f7
+0000 0058 LDA    $0106   	.....  A $0f B $02 C $00 D $04 E $02 H $03 L $0b SP 03f7
+0000 005b MOV    M,A     	.....  A $0f B $02 C $00 D $04 E $02 H $03 L $0b SP 03f7
+0000 005c INX    H       	.....  A $0f B $02 C $00 D $04 E $02 H $03 L $0c SP 03f7
+0000 005d LDA    $0107   	.....  A $fb B $02 C $00 D $04 E $02 H $03 L $0c SP 03f7
+0000 0060 MOV    M,A     	.....  A $fb B $02 C $00 D $04 E $02 H $03 L $0c SP 03f7
+0000 0061 INX    H       	.....  A $fb B $02 C $00 D $04 E $02 H $03 L $0d SP 03f7
+0000 0062 LDA    $0108   	.....  A $03 B $02 C $00 D $04 E $02 H $03 L $0d SP 03f7
+0000 0065 MOV    M,A     	.....  A $03 B $02 C $00 D $04 E $02 H $03 L $0d SP 03f7
+0000 0066 INX    H       	.....  A $03 B $02 C $00 D $04 E $02 H $03 L $0e SP 03f7
+0000 0067 LDA    $0109   	.....  A $57 B $02 C $00 D $04 E $02 H $03 L $0e SP 03f7
+0000 006a MOV    M,A     	.....  A $57 B $02 C $00 D $04 E $02 H $03 L $0e SP 03f7
+0000 006b INX    H       	.....  A $57 B $02 C $00 D $04 E $02 H $03 L $0f SP 03f7
+0000 006c LDA    $010a   	.....  A $02 B $02 C $00 D $04 E $02 H $03 L $0f SP 03f7
+0000 006f MOV    M,A     	.....  A $02 B $02 C $00 D $04 E $02 H $03 L $0f SP 03f7
+0000 0070 INX    H       	.....  A $02 B $02 C $00 D $04 E $02 H $03 L $10 SP 03f7
+0000 0071 LDA    $010b   	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $10 SP 03f7
+0000 0074 MOV    M,A     	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $10 SP 03f7
+0000 0075 INX    H       	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $11 SP 03f7
+0000 0076 LDA    $010c   	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $11 SP 03f7
+0000 0079 MOV    M,A     	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $11 SP 03f7
+0000 007a INX    H       	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $12 SP 03f7
+0000 007b LDA    $010d   	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $12 SP 03f7
+0000 007e MOV    M,A     	.....  A $00 B $02 C $00 D $04 E $02 H $03 L $12 SP 03f7
+0000 007f POP    H       	.....  A $00 B $02 C $00 D $04 E $02 H $02 L $00 SP 03f9
+0000 0080 INR    H       	..p..  A $00 B $02 C $00 D $04 E $02 H $03 L $00 SP 03f9
+0000 0081 INX    H       	..p..  A $00 B $02 C $00 D $04 E $02 H $03 L $01 SP 03f9
+0000 0082 INX    H       	..p..  A $00 B $02 C $00 D $04 E $02 H $03 L $02 SP 03f9
+0000 0083 INX    H       	..p..  A $00 B $02 C $00 D $04 E $02 H $03 L $03 SP 03f9
+0000 0084 INX    H       	..p..  A $00 B $02 C $00 D $04 E $02 H $03 L $04 SP 03f9
+0000 0085 INX    H       	..p..  A $00 B $02 C $00 D $04 E $02 H $03 L $05 SP 03f9
+0000 0086 MOV    A,M     	..p..  A $01 B $02 C $00 D $04 E $02 H $03 L $05 SP 03f9
+0000 0087 INX    H       	..p..  A $01 B $02 C $00 D $04 E $02 H $03 L $06 SP 03f9
+0000 0088 MOV    B,M     	..p..  A $01 B $00 C $00 D $04 E $02 H $03 L $06 SP 03f9
+0000 0089 INX    H       	..p..  A $01 B $00 C $00 D $04 E $02 H $03 L $07 SP 03f9
+0000 008a MOV    C,M     	..p..  A $01 B $00 C $1b D $04 E $02 H $03 L $07 SP 03f9
+0000 008b INX    H       	..p..  A $01 B $00 C $1b D $04 E $02 H $03 L $08 SP 03f9
+0000 008c INX    H       	..p..  A $01 B $00 C $1b D $04 E $02 H $03 L $09 SP 03f9
+0000 008d INX    H       	..p..  A $01 B $00 C $1b D $04 E $02 H $03 L $0a SP 03f9
+0000 008e INX    H       	..p..  A $01 B $00 C $1b D $04 E $02 H $03 L $0b SP 03f9
+0000 008f INX    H       	..p..  A $01 B $00 C $1b D $04 E $02 H $03 L $0c SP 03f9
+0000 0090 MOV    E,M     	..p..  A $01 B $00 C $1b D $04 E $fb H $03 L $0c SP 03f9
+0000 0091 INX    H       	..p..  A $01 B $00 C $1b D $04 E $fb H $03 L $0d SP 03f9
+0000 0092 MOV    D,M     	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $0d SP 03f9
+0000 0093 XCHG           	..p..  A $01 B $00 C $1b D $03 E $0d H $03 L $fb SP 03f9
+0000 0094 SPHL           	..p..  A $01 B $00 C $1b D $03 E $0d H $03 L $fb SP 03fb
+0000 0095 XCHG           	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $0d SP 03fb
+0000 0096 DCX    H       	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $0c SP 03fb
+0000 0097 DCX    H       	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $0b SP 03fb
+0000 0098 DCX    H       	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $0a SP 03fb
+0000 0099 DCX    H       	..p..  A $01 B $00 C $1b D $03 E $fb H $03 L $09 SP 03fb
+0000 009a MOV    E,M     	..p..  A $01 B $00 C $1b D $03 E $02 H $03 L $09 SP 03fb
+0000 009b DCX    H       	..p..  A $01 B $00 C $1b D $03 E $02 H $03 L $08 SP 03fb
+0000 009c MOV    D,M     	..p..  A $01 B $00 C $1b D $04 E $02 H $03 L $08 SP 03fb
+0000 009d PUSH   D       	..p..  A $01 B $00 C $1b D $04 E $02 H $03 L $08 SP 03f9
+0000 009e INX    H       	..p..  A $01 B $00 C $1b D $04 E $02 H $03 L $09 SP 03f9
+0000 009f INX    H       	..p..  A $01 B $00 C $1b D $04 E $02 H $03 L $0a SP 03f9
+0000 00a0 MOV    D,M     	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0a SP 03f9
+0000 00a1 INX    H       	..p..  A $01 B $00 C $1b D $05 E $02 H $03 L $0b SP 03f9
+0000 00a2 MOV    E,M     	..p..  A $01 B $00 C $1b D $05 E $0f H $03 L $0b SP 03f9
+0000 00a3 PUSH   D       	..p..  A $01 B $00 C $1b D $05 E $0f H $03 L $0b SP 03f7
+0000 00a4 INX    H       	..p..  A $01 B $00 C $1b D $05 E $0f H $03 L $0c SP 03f7
+0000 00a5 INX    H       	..p..  A $01 B $00 C $1b D $05 E $0f H $03 L $0d SP 03f7
+0000 00a6 INX    H       	..p..  A $01 B $00 C $1b D $05 E $0f H $03 L $0e SP 03f7
+0000 00a7 MOV    E,M     	..p..  A $01 B $00 C $1b D $05 E $57 H $03 L $0e SP 03f7
+0000 00a8 INX    H       	..p..  A $01 B $00 C $1b D $05 E $57 H $03 L $0f SP 03f7
+0000 00a9 MOV    D,M     	..p..  A $01 B $00 C $1b D $02 E $57 H $03 L $0f SP 03f7
+0000 00aa PUSH   D       	..p..  A $01 B $00 C $1b D $02 E $57 H $03 L $0f SP 03f5
+0000 00ab INX    H       	..p..  A $01 B $00 C $1b D $02 E $57 H $03 L $10 SP 03f5
+0000 00ac MOV    D,M     	..p..  A $01 B $00 C $1b D $00 E $57 H $03 L $10 SP 03f5
+0000 00ad INX    H       	..p..  A $01 B $00 C $1b D $00 E $57 H $03 L $11 SP 03f5
+0000 00ae MOV    E,M     	..p..  A $01 B $00 C $1b D $00 E $00 H $03 L $11 SP 03f5
+0000 00af PUSH   D       	..p..  A $01 B $00 C $1b D $00 E $00 H $03 L $11 SP 03f3
+0000 00b0 INX    H       	..p..  A $01 B $00 C $1b D $00 E $00 H $03 L $12 SP 03f3
+0000 00b1 MOV    L,M     	..p..  A $01 B $00 C $1b D $00 E $00 H $03 L $00 SP 03f3
+0000 00b2 MOV    H,A     	..p..  A $01 B $00 C $1b D $00 E $00 H $01 L $00 SP 03f3
+0000 00b3 PUSH   H       	..p..  A $01 B $00 C $1b D $00 E $00 H $01 L $00 SP 03f1
+0000 00b4 POP    PSW     	.....  A $01 B $00 C $1b D $00 E $00 H $01 L $00 SP 03f3
+0000 00b5 POP    D       	.....  A $01 B $00 C $1b D $00 E $00 H $01 L $00 SP 03f5
+0000 00b6 POP    H       	.....  A $01 B $00 C $1b D $00 E $00 H $02 L $57 SP 03f7
+0000 00b7 EI             	.....  A $01 B $00 C $1b D $00 E $00 H $02 L $57 SP 03f7
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	.....  A $01 B $00 C $1b D $04 E $02 H $05 L $0f SP 03fb
+Scheduler Timer is: 9
+0000 0257 DCX    H       	.....  A $01 B $00 C $1b D $04 E $02 H $05 L $0e SP 03fb
+Scheduler Timer is: 14
+0000 0258 MVI    M,#$00  	.....  A $01 B $00 C $1b D $04 E $02 H $05 L $0e SP 03fb
+Scheduler Timer is: 24
+0000 025a MOV    H,D     	.....  A $01 B $00 C $1b D $04 E $02 H $04 L $0e SP 03fb
+Scheduler Timer is: 29
+0000 025b MVI    L,#$00  	.....  A $01 B $00 C $1b D $04 E $02 H $04 L $00 SP 03fb
+Scheduler Timer is: 36
+0000 025d MOV    E,A     	.....  A $01 B $00 C $1b D $04 E $01 H $04 L $00 SP 03fb
+Scheduler Timer is: 41
+0000 025e PUSH   D       	.....  A $01 B $00 C $1b D $04 E $01 H $04 L $00 SP 03f9
+Scheduler Timer is: 52
+0000 025f MVI    A,#$05  	.....  A $05 B $00 C $1b D $04 E $01 H $04 L $00 SP 03f9
+Scheduler Timer is: 59
+
+
+
+
+
+0000 0261 DI             	.....  A $05 B $00 C $1b D $04 E $01 H $04 L $00 SP 03f9
+0000 0262 EI             	.....  A $05 B $00 C $1b D $04 E $01 H $04 L $00 SP 03f9
+
+
+
+
+
+Scheduler Timer is: 4
+0000 0263 CALL   $0007   	.....  A $05 B $00 C $1b D $04 E $01 H $04 L $00 SP 03f7
+Scheduler Timer is: 21
+
+
+
+
+	.....  A $05 B $00 C $1b D $04 E $01 H $04 L $00 SP 03f7
+Scheduler Timer is: 32
+
+
+
+
+
+0000 0028 DI             	.....  A $05 B $00 C $1b D $04 E $01 H $04 L $00 SP 03f7
+0000 0029 LXI    H,#$010a	.....  A $05 B $00 C $1b D $04 E $01 H $01 L $0a SP 03f7
+0000 002c MOV    B,M     	.....  A $05 B $02 C $1b D $04 E $01 H $01 L $0a SP 03f7
+0000 002d MVI    C,#$ff  	.....  A $05 B $02 C $ff D $04 E $01 H $01 L $0a SP 03f7
+0000 002f INX    B       	.....  A $05 B $03 C $00 D $04 E $01 H $01 L $0a SP 03f7
+0000 0030 MOV    H,B     	.....  A $05 B $03 C $00 D $04 E $01 H $03 L $0a SP 03f7
+0000 0031 MOV    L,C     	.....  A $05 B $03 C $00 D $04 E $01 H $03 L $00 SP 03f7
+0000 0032 MOV    B,M     	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $00 SP 03f7
+0000 0033 INX    H       	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $01 SP 03f7
+0000 0034 MOV    C,M     	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $01 SP 03f7
+0000 0035 PUSH   B       	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $01 SP 03f5
+0000 0036 INX    H       	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $02 SP 03f5
+0000 0037 INX    H       	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $03 SP 03f5
+0000 0038 INX    H       	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $04 SP 03f5
+0000 0039 INX    H       	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $05 SP 03f5
+0000 003a LDA    $0100   	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $05 SP 03f5
+0000 003d MOV    M,A     	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $05 SP 03f5
+0000 003e INX    H       	.....  A $05 B $02 C $00 D $04 E $01 H $03 L $06 SP 03f5
+0000 003f LDA    $0101   	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $06 SP 03f5
+0000 0042 MOV    M,A     	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $06 SP 03f5
+0000 0043 INX    H       	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $07 SP 03f5
+0000 0044 LDA    $0102   	.....  A $1b B $02 C $00 D $04 E $01 H $03 L $07 SP 03f5
+0000 0047 MOV    M,A     	.....  A $1b B $02 C $00 D $04 E $01 H $03 L $07 SP 03f5
+0000 0048 INX    H       	.....  A $1b B $02 C $00 D $04 E $01 H $03 L $08 SP 03f5
+0000 0049 LDA    $0103   	.....  A $04 B $02 C $00 D $04 E $01 H $03 L $08 SP 03f5
+0000 004c MOV    M,A     	.....  A $04 B $02 C $00 D $04 E $01 H $03 L $08 SP 03f5
+0000 004d INX    H       	.....  A $04 B $02 C $00 D $04 E $01 H $03 L $09 SP 03f5
+0000 004e LDA    $0104   	.....  A $01 B $02 C $00 D $04 E $01 H $03 L $09 SP 03f5
+0000 0051 MOV    M,A     	.....  A $01 B $02 C $00 D $04 E $01 H $03 L $09 SP 03f5
+0000 0052 INX    H       	.....  A $01 B $02 C $00 D $04 E $01 H $03 L $0a SP 03f5
+0000 0053 LDA    $0105   	.....  A $04 B $02 C $00 D $04 E $01 H $03 L $0a SP 03f5
+0000 0056 MOV    M,A     	.....  A $04 B $02 C $00 D $04 E $01 H $03 L $0a SP 03f5
+0000 0057 INX    H       	.....  A $04 B $02 C $00 D $04 E $01 H $03 L $0b SP 03f5
+0000 0058 LDA    $0106   	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $0b SP 03f5
+0000 005b MOV    M,A     	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $0b SP 03f5
+0000 005c INX    H       	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $0c SP 03f5
+0000 005d LDA    $0107   	.....  A $f9 B $02 C $00 D $04 E $01 H $03 L $0c SP 03f5
+0000 0060 MOV    M,A     	.....  A $f9 B $02 C $00 D $04 E $01 H $03 L $0c SP 03f5
+0000 0061 INX    H       	.....  A $f9 B $02 C $00 D $04 E $01 H $03 L $0d SP 03f5
+0000 0062 LDA    $0108   	.....  A $03 B $02 C $00 D $04 E $01 H $03 L $0d SP 03f5
+0000 0065 MOV    M,A     	.....  A $03 B $02 C $00 D $04 E $01 H $03 L $0d SP 03f5
+0000 0066 INX    H       	.....  A $03 B $02 C $00 D $04 E $01 H $03 L $0e SP 03f5
+0000 0067 LDA    $0109   	.....  A $66 B $02 C $00 D $04 E $01 H $03 L $0e SP 03f5
+0000 006a MOV    M,A     	.....  A $66 B $02 C $00 D $04 E $01 H $03 L $0e SP 03f5
+0000 006b INX    H       	.....  A $66 B $02 C $00 D $04 E $01 H $03 L $0f SP 03f5
+0000 006c LDA    $010a   	.....  A $02 B $02 C $00 D $04 E $01 H $03 L $0f SP 03f5
+0000 006f MOV    M,A     	.....  A $02 B $02 C $00 D $04 E $01 H $03 L $0f SP 03f5
+0000 0070 INX    H       	.....  A $02 B $02 C $00 D $04 E $01 H $03 L $10 SP 03f5
+0000 0071 LDA    $010b   	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $10 SP 03f5
+0000 0074 MOV    M,A     	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $10 SP 03f5
+0000 0075 INX    H       	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $11 SP 03f5
+0000 0076 LDA    $010c   	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $11 SP 03f5
+0000 0079 MOV    M,A     	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $11 SP 03f5
+0000 007a INX    H       	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $12 SP 03f5
+0000 007b LDA    $010d   	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $12 SP 03f5
+0000 007e MOV    M,A     	.....  A $00 B $02 C $00 D $04 E $01 H $03 L $12 SP 03f5
+0000 007f POP    H       	.....  A $00 B $02 C $00 D $04 E $01 H $02 L $00 SP 03f7
+0000 0080 INR    H       	..p..  A $00 B $02 C $00 D $04 E $01 H $03 L $00 SP 03f7
+0000 0081 INX    H       	..p..  A $00 B $02 C $00 D $04 E $01 H $03 L $01 SP 03f7
+0000 0082 INX    H       	..p..  A $00 B $02 C $00 D $04 E $01 H $03 L $02 SP 03f7
+0000 0083 INX    H       	..p..  A $00 B $02 C $00 D $04 E $01 H $03 L $03 SP 03f7
+0000 0084 INX    H       	..p..  A $00 B $02 C $00 D $04 E $01 H $03 L $04 SP 03f7
+0000 0085 INX    H       	..p..  A $00 B $02 C $00 D $04 E $01 H $03 L $05 SP 03f7
+0000 0086 MOV    A,M     	..p..  A $05 B $02 C $00 D $04 E $01 H $03 L $05 SP 03f7
+0000 0087 INX    H       	..p..  A $05 B $02 C $00 D $04 E $01 H $03 L $06 SP 03f7
+0000 0088 MOV    B,M     	..p..  A $05 B $00 C $00 D $04 E $01 H $03 L $06 SP 03f7
+0000 0089 INX    H       	..p..  A $05 B $00 C $00 D $04 E $01 H $03 L $07 SP 03f7
+0000 008a MOV    C,M     	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $07 SP 03f7
+0000 008b INX    H       	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $08 SP 03f7
+0000 008c INX    H       	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $09 SP 03f7
+0000 008d INX    H       	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $0a SP 03f7
+0000 008e INX    H       	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $0b SP 03f7
+0000 008f INX    H       	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $0c SP 03f7
+0000 0090 MOV    E,M     	..p..  A $05 B $00 C $1b D $04 E $f9 H $03 L $0c SP 03f7
+0000 0091 INX    H       	..p..  A $05 B $00 C $1b D $04 E $f9 H $03 L $0d SP 03f7
+0000 0092 MOV    D,M     	..p..  A $05 B $00 C $1b D $03 E $f9 H $03 L $0d SP 03f7
+0000 0093 XCHG           	..p..  A $05 B $00 C $1b D $03 E $0d H $03 L $f9 SP 03f7
+0000 0094 SPHL           	..p..  A $05 B $00 C $1b D $03 E $0d H $03 L $f9 SP 03f9
+0000 0095 XCHG           	..p..  A $05 B $00 C $1b D $03 E $f9 H $03 L $0d SP 03f9
+0000 0096 DCX    H       	..p..  A $05 B $00 C $1b D $03 E $f9 H $03 L $0c SP 03f9
+0000 0097 DCX    H       	..p..  A $05 B $00 C $1b D $03 E $f9 H $03 L $0b SP 03f9
+0000 0098 DCX    H       	..p..  A $05 B $00 C $1b D $03 E $f9 H $03 L $0a SP 03f9
+0000 0099 DCX    H       	..p..  A $05 B $00 C $1b D $03 E $f9 H $03 L $09 SP 03f9
+0000 009a MOV    E,M     	..p..  A $05 B $00 C $1b D $03 E $01 H $03 L $09 SP 03f9
+0000 009b DCX    H       	..p..  A $05 B $00 C $1b D $03 E $01 H $03 L $08 SP 03f9
+0000 009c MOV    D,M     	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $08 SP 03f9
+0000 009d PUSH   D       	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $08 SP 03f7
+0000 009e INX    H       	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $09 SP 03f7
+0000 009f INX    H       	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $0a SP 03f7
+0000 00a0 MOV    D,M     	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $0a SP 03f7
+0000 00a1 INX    H       	..p..  A $05 B $00 C $1b D $04 E $01 H $03 L $0b SP 03f7
+0000 00a2 MOV    E,M     	..p..  A $05 B $00 C $1b D $04 E $00 H $03 L $0b SP 03f7
+0000 00a3 PUSH   D       	..p..  A $05 B $00 C $1b D $04 E $00 H $03 L $0b SP 03f5
+0000 00a4 INX    H       	..p..  A $05 B $00 C $1b D $04 E $00 H $03 L $0c SP 03f5
+0000 00a5 INX    H       	..p..  A $05 B $00 C $1b D $04 E $00 H $03 L $0d SP 03f5
+0000 00a6 INX    H       	..p..  A $05 B $00 C $1b D $04 E $00 H $03 L $0e SP 03f5
+0000 00a7 MOV    E,M     	..p..  A $05 B $00 C $1b D $04 E $66 H $03 L $0e SP 03f5
+0000 00a8 INX    H       	..p..  A $05 B $00 C $1b D $04 E $66 H $03 L $0f SP 03f5
+0000 00a9 MOV    D,M     	..p..  A $05 B $00 C $1b D $02 E $66 H $03 L $0f SP 03f5
+0000 00aa PUSH   D       	..p..  A $05 B $00 C $1b D $02 E $66 H $03 L $0f SP 03f3
+0000 00ab INX    H       	..p..  A $05 B $00 C $1b D $02 E $66 H $03 L $10 SP 03f3
+0000 00ac MOV    D,M     	..p..  A $05 B $00 C $1b D $00 E $66 H $03 L $10 SP 03f3
+0000 00ad INX    H       	..p..  A $05 B $00 C $1b D $00 E $66 H $03 L $11 SP 03f3
+0000 00ae MOV    E,M     	..p..  A $05 B $00 C $1b D $00 E $00 H $03 L $11 SP 03f3
+0000 00af PUSH   D       	..p..  A $05 B $00 C $1b D $00 E $00 H $03 L $11 SP 03f1
+0000 00b0 INX    H       	..p..  A $05 B $00 C $1b D $00 E $00 H $03 L $12 SP 03f1
+0000 00b1 MOV    L,M     	..p..  A $05 B $00 C $1b D $00 E $00 H $03 L $00 SP 03f1
+0000 00b2 MOV    H,A     	..p..  A $05 B $00 C $1b D $00 E $00 H $05 L $00 SP 03f1
+0000 00b3 PUSH   H       	..p..  A $05 B $00 C $1b D $00 E $00 H $05 L $00 SP 03ef
+0000 00b4 POP    PSW     	.....  A $05 B $00 C $1b D $00 E $00 H $05 L $00 SP 03f1
+0000 00b5 POP    D       	.....  A $05 B $00 C $1b D $00 E $00 H $05 L $00 SP 03f3
+0000 00b6 POP    H       	.....  A $05 B $00 C $1b D $00 E $00 H $02 L $66 SP 03f5
+0000 00b7 EI             	.....  A $05 B $00 C $1b D $00 E $00 H $02 L $66 SP 03f5
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	.....  A $05 B $00 C $1b D $04 E $01 H $04 L $00 SP 03f9
+Scheduler Timer is: 9
+0000 0266 POP    D       	.....  A $05 B $00 C $1b D $04 E $01 H $04 L $00 SP 03fb
+Scheduler Timer is: 19
+0000 0267 MOV    B,E     	.....  A $05 B $01 C $1b D $04 E $01 H $04 L $00 SP 03fb
+Scheduler Timer is: 24
+0000 0268 INR    B       	.....  A $05 B $02 C $1b D $04 E $01 H $04 L $00 SP 03fb
+Scheduler Timer is: 29
+0000 0269 DCR    H       	..p..  A $05 B $02 C $1b D $04 E $01 H $03 L $00 SP 03fb
+Scheduler Timer is: 34
+0000 026a MOV    M,D     	..p..  A $05 B $02 C $1b D $04 E $01 H $03 L $00 SP 03fb
+Scheduler Timer is: 41
+0000 026b JMP    $0226   	..p..  A $05 B $02 C $1b D $04 E $01 H $03 L $00 SP 03fb
+Scheduler Timer is: 51
+0000 0226 MVI    A,#$03  	..p..  A $03 B $02 C $1b D $04 E $01 H $03 L $00 SP 03fb
+Scheduler Timer is: 58
+0000 0228 CMP    B       	.....  A $03 B $02 C $1b D $04 E $01 H $03 L $00 SP 03fb
+Scheduler Timer is: 62
+0000 0229 JZ     $026e   	.....  A $03 B $02 C $1b D $04 E $01 H $03 L $00 SP 03fb
+Scheduler Timer is: 72
+0000 022c MVI    D,#$02  	.....  A $03 B $02 C $1b D $02 E $01 H $03 L $00 SP 03fb
+Scheduler Timer is: 79
+0000 022e MVI    E,#$00  	.....  A $03 B $02 C $1b D $02 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 86
+Interrupt: 86
+	.....  A $03 B $02 C $1b D $02 E $00 H $03 L $00 SP 03f9
+Scheduler Timer is: 11
+
+
+
+
+
+0000 0028 DI             	.....  A $03 B $02 C $1b D $02 E $00 H $03 L $00 SP 03f9
+0000 0029 LXI    H,#$010a	.....  A $03 B $02 C $1b D $02 E $00 H $01 L $0a SP 03f9
+0000 002c MOV    B,M     	.....  A $03 B $02 C $1b D $02 E $00 H $01 L $0a SP 03f9
+0000 002d MVI    C,#$ff  	.....  A $03 B $02 C $ff D $02 E $00 H $01 L $0a SP 03f9
+0000 002f INX    B       	.....  A $03 B $03 C $00 D $02 E $00 H $01 L $0a SP 03f9
+0000 0030 MOV    H,B     	.....  A $03 B $03 C $00 D $02 E $00 H $03 L $0a SP 03f9
+0000 0031 MOV    L,C     	.....  A $03 B $03 C $00 D $02 E $00 H $03 L $00 SP 03f9
+0000 0032 MOV    B,M     	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $00 SP 03f9
+0000 0033 INX    H       	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $01 SP 03f9
+0000 0034 MOV    C,M     	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $01 SP 03f9
+0000 0035 PUSH   B       	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $01 SP 03f7
+0000 0036 INX    H       	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $02 SP 03f7
+0000 0037 INX    H       	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $03 SP 03f7
+0000 0038 INX    H       	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $04 SP 03f7
+0000 0039 INX    H       	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $05 SP 03f7
+0000 003a LDA    $0100   	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $05 SP 03f7
+0000 003d MOV    M,A     	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $05 SP 03f7
+0000 003e INX    H       	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $06 SP 03f7
+0000 003f LDA    $0101   	.....  A $02 B $04 C $00 D $02 E $00 H $03 L $06 SP 03f7
+0000 0042 MOV    M,A     	.....  A $02 B $04 C $00 D $02 E $00 H $03 L $06 SP 03f7
+0000 0043 INX    H       	.....  A $02 B $04 C $00 D $02 E $00 H $03 L $07 SP 03f7
+0000 0044 LDA    $0102   	.....  A $1b B $04 C $00 D $02 E $00 H $03 L $07 SP 03f7
+0000 0047 MOV    M,A     	.....  A $1b B $04 C $00 D $02 E $00 H $03 L $07 SP 03f7
+0000 0048 INX    H       	.....  A $1b B $04 C $00 D $02 E $00 H $03 L $08 SP 03f7
+0000 0049 LDA    $0103   	.....  A $02 B $04 C $00 D $02 E $00 H $03 L $08 SP 03f7
+0000 004c MOV    M,A     	.....  A $02 B $04 C $00 D $02 E $00 H $03 L $08 SP 03f7
+0000 004d INX    H       	.....  A $02 B $04 C $00 D $02 E $00 H $03 L $09 SP 03f7
+0000 004e LDA    $0104   	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $09 SP 03f7
+0000 0051 MOV    M,A     	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $09 SP 03f7
+0000 0052 INX    H       	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $0a SP 03f7
+0000 0053 LDA    $0105   	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $0a SP 03f7
+0000 0056 MOV    M,A     	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $0a SP 03f7
+0000 0057 INX    H       	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $0b SP 03f7
+0000 0058 LDA    $0106   	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $0b SP 03f7
+0000 005b MOV    M,A     	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $0b SP 03f7
+0000 005c INX    H       	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $0c SP 03f7
+0000 005d LDA    $0107   	.....  A $fb B $04 C $00 D $02 E $00 H $03 L $0c SP 03f7
+0000 0060 MOV    M,A     	.....  A $fb B $04 C $00 D $02 E $00 H $03 L $0c SP 03f7
+0000 0061 INX    H       	.....  A $fb B $04 C $00 D $02 E $00 H $03 L $0d SP 03f7
+0000 0062 LDA    $0108   	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $0d SP 03f7
+0000 0065 MOV    M,A     	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $0d SP 03f7
+0000 0066 INX    H       	.....  A $03 B $04 C $00 D $02 E $00 H $03 L $0e SP 03f7
+0000 0067 LDA    $0109   	.....  A $30 B $04 C $00 D $02 E $00 H $03 L $0e SP 03f7
+0000 006a MOV    M,A     	.....  A $30 B $04 C $00 D $02 E $00 H $03 L $0e SP 03f7
+0000 006b INX    H       	.....  A $30 B $04 C $00 D $02 E $00 H $03 L $0f SP 03f7
+0000 006c LDA    $010a   	.....  A $02 B $04 C $00 D $02 E $00 H $03 L $0f SP 03f7
+0000 006f MOV    M,A     	.....  A $02 B $04 C $00 D $02 E $00 H $03 L $0f SP 03f7
+0000 0070 INX    H       	.....  A $02 B $04 C $00 D $02 E $00 H $03 L $10 SP 03f7
+0000 0071 LDA    $010b   	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $10 SP 03f7
+0000 0074 MOV    M,A     	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $10 SP 03f7
+0000 0075 INX    H       	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $11 SP 03f7
+0000 0076 LDA    $010c   	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $11 SP 03f7
+0000 0079 MOV    M,A     	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $11 SP 03f7
+0000 007a INX    H       	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $12 SP 03f7
+0000 007b LDA    $010d   	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $12 SP 03f7
+0000 007e MOV    M,A     	.....  A $00 B $04 C $00 D $02 E $00 H $03 L $12 SP 03f7
+0000 007f POP    H       	.....  A $00 B $04 C $00 D $02 E $00 H $04 L $00 SP 03f9
+0000 0080 INR    H       	..p..  A $00 B $04 C $00 D $02 E $00 H $05 L $00 SP 03f9
+0000 0081 INX    H       	..p..  A $00 B $04 C $00 D $02 E $00 H $05 L $01 SP 03f9
+0000 0082 INX    H       	..p..  A $00 B $04 C $00 D $02 E $00 H $05 L $02 SP 03f9
+0000 0083 INX    H       	..p..  A $00 B $04 C $00 D $02 E $00 H $05 L $03 SP 03f9
+0000 0084 INX    H       	..p..  A $00 B $04 C $00 D $02 E $00 H $05 L $04 SP 03f9
+0000 0085 INX    H       	..p..  A $00 B $04 C $00 D $02 E $00 H $05 L $05 SP 03f9
+0000 0086 MOV    A,M     	..p..  A $00 B $04 C $00 D $02 E $00 H $05 L $05 SP 03f9
+0000 0087 INX    H       	..p..  A $00 B $04 C $00 D $02 E $00 H $05 L $06 SP 03f9
+0000 0088 MOV    B,M     	..p..  A $00 B $00 C $00 D $02 E $00 H $05 L $06 SP 03f9
+0000 0089 INX    H       	..p..  A $00 B $00 C $00 D $02 E $00 H $05 L $07 SP 03f9
+0000 008a MOV    C,M     	..p..  A $00 B $00 C $00 D $02 E $00 H $05 L $07 SP 03f9
+0000 008b INX    H       	..p..  A $00 B $00 C $00 D $02 E $00 H $05 L $08 SP 03f9
+0000 008c INX    H       	..p..  A $00 B $00 C $00 D $02 E $00 H $05 L $09 SP 03f9
+0000 008d INX    H       	..p..  A $00 B $00 C $00 D $02 E $00 H $05 L $0a SP 03f9
+0000 008e INX    H       	..p..  A $00 B $00 C $00 D $02 E $00 H $05 L $0b SP 03f9
+0000 008f INX    H       	..p..  A $00 B $00 C $00 D $02 E $00 H $05 L $0c SP 03f9
+0000 0090 MOV    E,M     	..p..  A $00 B $00 C $00 D $02 E $ff H $05 L $0c SP 03f9
+0000 0091 INX    H       	..p..  A $00 B $00 C $00 D $02 E $ff H $05 L $0d SP 03f9
+0000 0092 MOV    D,M     	..p..  A $00 B $00 C $00 D $05 E $ff H $05 L $0d SP 03f9
+0000 0093 XCHG           	..p..  A $00 B $00 C $00 D $05 E $0d H $05 L $ff SP 03f9
+0000 0094 SPHL           	..p..  A $00 B $00 C $00 D $05 E $0d H $05 L $ff SP 05ff
+0000 0095 XCHG           	..p..  A $00 B $00 C $00 D $05 E $ff H $05 L $0d SP 05ff
+0000 0096 DCX    H       	..p..  A $00 B $00 C $00 D $05 E $ff H $05 L $0c SP 05ff
+0000 0097 DCX    H       	..p..  A $00 B $00 C $00 D $05 E $ff H $05 L $0b SP 05ff
+0000 0098 DCX    H       	..p..  A $00 B $00 C $00 D $05 E $ff H $05 L $0a SP 05ff
+0000 0099 DCX    H       	..p..  A $00 B $00 C $00 D $05 E $ff H $05 L $09 SP 05ff
+0000 009a MOV    E,M     	..p..  A $00 B $00 C $00 D $05 E $00 H $05 L $09 SP 05ff
+0000 009b DCX    H       	..p..  A $00 B $00 C $00 D $05 E $00 H $05 L $08 SP 05ff
+0000 009c MOV    D,M     	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $08 SP 05ff
+0000 009d PUSH   D       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $08 SP 05fd
+0000 009e INX    H       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $09 SP 05fd
+0000 009f INX    H       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $0a SP 05fd
+0000 00a0 MOV    D,M     	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $0a SP 05fd
+0000 00a1 INX    H       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $0b SP 05fd
+0000 00a2 MOV    E,M     	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $0b SP 05fd
+0000 00a3 PUSH   D       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $0b SP 05fb
+0000 00a4 INX    H       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $0c SP 05fb
+0000 00a5 INX    H       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $0d SP 05fb
+0000 00a6 INX    H       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $0e SP 05fb
+0000 00a7 MOV    E,M     	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $0e SP 05fb
+0000 00a8 INX    H       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $0f SP 05fb
+0000 00a9 MOV    D,M     	..p..  A $00 B $00 C $00 D $04 E $00 H $05 L $0f SP 05fb
+0000 00aa PUSH   D       	..p..  A $00 B $00 C $00 D $04 E $00 H $05 L $0f SP 05f9
+0000 00ab INX    H       	..p..  A $00 B $00 C $00 D $04 E $00 H $05 L $10 SP 05f9
+0000 00ac MOV    D,M     	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $10 SP 05f9
+0000 00ad INX    H       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $11 SP 05f9
+0000 00ae MOV    E,M     	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $11 SP 05f9
+0000 00af PUSH   D       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $11 SP 05f7
+0000 00b0 INX    H       	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $12 SP 05f7
+0000 00b1 MOV    L,M     	..p..  A $00 B $00 C $00 D $00 E $00 H $05 L $00 SP 05f7
+0000 00b2 MOV    H,A     	..p..  A $00 B $00 C $00 D $00 E $00 H $00 L $00 SP 05f7
+0000 00b3 PUSH   H       	..p..  A $00 B $00 C $00 D $00 E $00 H $00 L $00 SP 05f5
+0000 00b4 POP    PSW     	.....  A $00 B $00 C $00 D $00 E $00 H $00 L $00 SP 05f7
+0000 00b5 POP    D       	.....  A $00 B $00 C $00 D $00 E $00 H $00 L $00 SP 05f9
+0000 00b6 POP    H       	.....  A $00 B $00 C $00 D $00 E $00 H $04 L $00 SP 05fb
+0000 00b7 EI             	.....  A $00 B $00 C $00 D $00 E $00 H $04 L $00 SP 05fb
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	.....  A $00 B $00 C $00 D $00 E $00 H $00 L $00 SP 05ff
+Scheduler Timer is: 9
+0000 0400 MVI    A,#$07  	.....  A $07 B $00 C $00 D $00 E $00 H $00 L $00 SP 05ff
+Scheduler Timer is: 16
+0000 0402 CALL   $0007   	.....  A $07 B $00 C $00 D $00 E $00 H $00 L $00 SP 05fd
+Scheduler Timer is: 33
+
+
+
+
+0000 0405 MOV    D,B     	.....  A $07 B $01 C $00 D $01 E $00 H $00 L $00 SP 05ff
+Scheduler Timer is: 38
+0000 0406 MOV    E,B     	.....  A $07 B $01 C $00 D $01 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 43
+0000 0407 INR    D       	.....  A $07 B $01 C $00 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 48
+0000 0408 MVI    A,#$00  	.....  A $00 B $01 C $00 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 55
+0000 040a SUB    B       	.spc.  A $ff B $01 C $00 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 59
+0000 040b JP     $0031   	.spc.  A $ff B $01 C $00 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 69
+0000 040e MVI    C,#$01  	.spc.  A $ff B $01 C $01 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 76
+0000 0410 MOV    B,C     	.spc.  A $ff B $01 C $01 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 81
+Interrupt: 81
+	.spc.  A $ff B $01 C $01 D $02 E $01 H $00 L $00 SP 05fd
+Scheduler Timer is: 11
+
+
+
+
+
+0000 0028 DI             	.spc.  A $ff B $01 C $01 D $02 E $01 H $00 L $00 SP 05fd
+0000 0029 LXI    H,#$010a	.spc.  A $ff B $01 C $01 D $02 E $01 H $01 L $0a SP 05fd
+0000 002c MOV    B,M     	.spc.  A $ff B $04 C $01 D $02 E $01 H $01 L $0a SP 05fd
+0000 002d MVI    C,#$ff  	.spc.  A $ff B $04 C $ff D $02 E $01 H $01 L $0a SP 05fd
+0000 002f INX    B       	.spc.  A $ff B $05 C $00 D $02 E $01 H $01 L $0a SP 05fd
+0000 0030 MOV    H,B     	.spc.  A $ff B $05 C $00 D $02 E $01 H $05 L $0a SP 05fd
+0000 0031 MOV    L,C     	.spc.  A $ff B $05 C $00 D $02 E $01 H $05 L $00 SP 05fd
+0000 0032 MOV    B,M     	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $00 SP 05fd
+0000 0033 INX    H       	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $01 SP 05fd
+0000 0034 MOV    C,M     	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $01 SP 05fd
+0000 0035 PUSH   B       	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $01 SP 05fb
+0000 0036 INX    H       	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $02 SP 05fb
+0000 0037 INX    H       	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $03 SP 05fb
+0000 0038 INX    H       	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $04 SP 05fb
+0000 0039 INX    H       	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $05 SP 05fb
+0000 003a LDA    $0100   	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $05 SP 05fb
+0000 003d MOV    M,A     	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $05 SP 05fb
+0000 003e INX    H       	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $06 SP 05fb
+0000 003f LDA    $0101   	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $06 SP 05fb
+0000 0042 MOV    M,A     	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $06 SP 05fb
+0000 0043 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $07 SP 05fb
+0000 0044 LDA    $0102   	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $07 SP 05fb
+0000 0047 MOV    M,A     	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $07 SP 05fb
+0000 0048 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $08 SP 05fb
+0000 0049 LDA    $0103   	.spc.  A $02 B $02 C $00 D $02 E $01 H $05 L $08 SP 05fb
+0000 004c MOV    M,A     	.spc.  A $02 B $02 C $00 D $02 E $01 H $05 L $08 SP 05fb
+0000 004d INX    H       	.spc.  A $02 B $02 C $00 D $02 E $01 H $05 L $09 SP 05fb
+0000 004e LDA    $0104   	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $09 SP 05fb
+0000 0051 MOV    M,A     	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $09 SP 05fb
+0000 0052 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $0a SP 05fb
+0000 0053 LDA    $0105   	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0a SP 05fb
+0000 0056 MOV    M,A     	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0a SP 05fb
+0000 0057 INX    H       	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0b SP 05fb
+0000 0058 LDA    $0106   	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0b SP 05fb
+0000 005b MOV    M,A     	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0b SP 05fb
+0000 005c INX    H       	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0c SP 05fb
+0000 005d LDA    $0107   	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $0c SP 05fb
+0000 0060 MOV    M,A     	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $0c SP 05fb
+0000 0061 INX    H       	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $0d SP 05fb
+0000 0062 LDA    $0108   	.spc.  A $05 B $02 C $00 D $02 E $01 H $05 L $0d SP 05fb
+0000 0065 MOV    M,A     	.spc.  A $05 B $02 C $00 D $02 E $01 H $05 L $0d SP 05fb
+0000 0066 INX    H       	.spc.  A $05 B $02 C $00 D $02 E $01 H $05 L $0e SP 05fb
+0000 0067 LDA    $0109   	.spc.  A $11 B $02 C $00 D $02 E $01 H $05 L $0e SP 05fb
+0000 006a MOV    M,A     	.spc.  A $11 B $02 C $00 D $02 E $01 H $05 L $0e SP 05fb
+0000 006b INX    H       	.spc.  A $11 B $02 C $00 D $02 E $01 H $05 L $0f SP 05fb
+0000 006c LDA    $010a   	.spc.  A $04 B $02 C $00 D $02 E $01 H $05 L $0f SP 05fb
+0000 006f MOV    M,A     	.spc.  A $04 B $02 C $00 D $02 E $01 H $05 L $0f SP 05fb
+0000 0070 INX    H       	.spc.  A $04 B $02 C $00 D $02 E $01 H $05 L $10 SP 05fb
+0000 0071 LDA    $010b   	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $10 SP 05fb
+0000 0074 MOV    M,A     	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $10 SP 05fb
+0000 0075 INX    H       	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $11 SP 05fb
+0000 0076 LDA    $010c   	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $11 SP 05fb
+0000 0079 MOV    M,A     	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $11 SP 05fb
+0000 007a INX    H       	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $12 SP 05fb
+0000 007b LDA    $010d   	.spc.  A $85 B $02 C $00 D $02 E $01 H $05 L $12 SP 05fb
+0000 007e MOV    M,A     	.spc.  A $85 B $02 C $00 D $02 E $01 H $05 L $12 SP 05fb
+0000 007f POP    H       	.spc.  A $85 B $02 C $00 D $02 E $01 H $02 L $00 SP 05fd
+0000 0080 INR    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $00 SP 05fd
+0000 0081 INX    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $01 SP 05fd
+0000 0082 INX    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $02 SP 05fd
+0000 0083 INX    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $03 SP 05fd
+0000 0084 INX    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $04 SP 05fd
+0000 0085 INX    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $05 SP 05fd
+0000 0086 MOV    A,M     	..pc.  A $03 B $02 C $00 D $02 E $01 H $03 L $05 SP 05fd
+0000 0087 INX    H       	..pc.  A $03 B $02 C $00 D $02 E $01 H $03 L $06 SP 05fd
+0000 0088 MOV    B,M     	..pc.  A $03 B $02 C $00 D $02 E $01 H $03 L $06 SP 05fd
+0000 0089 INX    H       	..pc.  A $03 B $02 C $00 D $02 E $01 H $03 L $07 SP 05fd
+0000 008a MOV    C,M     	..pc.  A $03 B $02 C $1b D $02 E $01 H $03 L $07 SP 05fd
+0000 008b INX    H       	..pc.  A $03 B $02 C $1b D $02 E $01 H $03 L $08 SP 05fd
+0000 008c INX    H       	..pc.  A $03 B $02 C $1b D $02 E $01 H $03 L $09 SP 05fd
+0000 008d INX    H       	..pc.  A $03 B $02 C $1b D $02 E $01 H $03 L $0a SP 05fd
+0000 008e INX    H       	..pc.  A $03 B $02 C $1b D $02 E $01 H $03 L $0b SP 05fd
+0000 008f INX    H       	..pc.  A $03 B $02 C $1b D $02 E $01 H $03 L $0c SP 05fd
+0000 0090 MOV    E,M     	..pc.  A $03 B $02 C $1b D $02 E $fb H $03 L $0c SP 05fd
+0000 0091 INX    H       	..pc.  A $03 B $02 C $1b D $02 E $fb H $03 L $0d SP 05fd
+0000 0092 MOV    D,M     	..pc.  A $03 B $02 C $1b D $03 E $fb H $03 L $0d SP 05fd
+0000 0093 XCHG           	..pc.  A $03 B $02 C $1b D $03 E $0d H $03 L $fb SP 05fd
+0000 0094 SPHL           	..pc.  A $03 B $02 C $1b D $03 E $0d H $03 L $fb SP 03fb
+0000 0095 XCHG           	..pc.  A $03 B $02 C $1b D $03 E $fb H $03 L $0d SP 03fb
+0000 0096 DCX    H       	..pc.  A $03 B $02 C $1b D $03 E $fb H $03 L $0c SP 03fb
+0000 0097 DCX    H       	..pc.  A $03 B $02 C $1b D $03 E $fb H $03 L $0b SP 03fb
+0000 0098 DCX    H       	..pc.  A $03 B $02 C $1b D $03 E $fb H $03 L $0a SP 03fb
+0000 0099 DCX    H       	..pc.  A $03 B $02 C $1b D $03 E $fb H $03 L $09 SP 03fb
+0000 009a MOV    E,M     	..pc.  A $03 B $02 C $1b D $03 E $00 H $03 L $09 SP 03fb
+0000 009b DCX    H       	..pc.  A $03 B $02 C $1b D $03 E $00 H $03 L $08 SP 03fb
+0000 009c MOV    D,M     	..pc.  A $03 B $02 C $1b D $02 E $00 H $03 L $08 SP 03fb
+0000 009d PUSH   D       	..pc.  A $03 B $02 C $1b D $02 E $00 H $03 L $08 SP 03f9
+0000 009e INX    H       	..pc.  A $03 B $02 C $1b D $02 E $00 H $03 L $09 SP 03f9
+0000 009f INX    H       	..pc.  A $03 B $02 C $1b D $02 E $00 H $03 L $0a SP 03f9
+0000 00a0 MOV    D,M     	..pc.  A $03 B $02 C $1b D $03 E $00 H $03 L $0a SP 03f9
+0000 00a1 INX    H       	..pc.  A $03 B $02 C $1b D $03 E $00 H $03 L $0b SP 03f9
+0000 00a2 MOV    E,M     	..pc.  A $03 B $02 C $1b D $03 E $00 H $03 L $0b SP 03f9
+0000 00a3 PUSH   D       	..pc.  A $03 B $02 C $1b D $03 E $00 H $03 L $0b SP 03f7
+0000 00a4 INX    H       	..pc.  A $03 B $02 C $1b D $03 E $00 H $03 L $0c SP 03f7
+0000 00a5 INX    H       	..pc.  A $03 B $02 C $1b D $03 E $00 H $03 L $0d SP 03f7
+0000 00a6 INX    H       	..pc.  A $03 B $02 C $1b D $03 E $00 H $03 L $0e SP 03f7
+0000 00a7 MOV    E,M     	..pc.  A $03 B $02 C $1b D $03 E $30 H $03 L $0e SP 03f7
+0000 00a8 INX    H       	..pc.  A $03 B $02 C $1b D $03 E $30 H $03 L $0f SP 03f7
+0000 00a9 MOV    D,M     	..pc.  A $03 B $02 C $1b D $02 E $30 H $03 L $0f SP 03f7
+0000 00aa PUSH   D       	..pc.  A $03 B $02 C $1b D $02 E $30 H $03 L $0f SP 03f5
+0000 00ab INX    H       	..pc.  A $03 B $02 C $1b D $02 E $30 H $03 L $10 SP 03f5
+0000 00ac MOV    D,M     	..pc.  A $03 B $02 C $1b D $00 E $30 H $03 L $10 SP 03f5
+0000 00ad INX    H       	..pc.  A $03 B $02 C $1b D $00 E $30 H $03 L $11 SP 03f5
+0000 00ae MOV    E,M     	..pc.  A $03 B $02 C $1b D $00 E $00 H $03 L $11 SP 03f5
+0000 00af PUSH   D       	..pc.  A $03 B $02 C $1b D $00 E $00 H $03 L $11 SP 03f3
+0000 00b0 INX    H       	..pc.  A $03 B $02 C $1b D $00 E $00 H $03 L $12 SP 03f3
+0000 00b1 MOV    L,M     	..pc.  A $03 B $02 C $1b D $00 E $00 H $03 L $00 SP 03f3
+0000 00b2 MOV    H,A     	..pc.  A $03 B $02 C $1b D $00 E $00 H $03 L $00 SP 03f3
+0000 00b3 PUSH   H       	..pc.  A $03 B $02 C $1b D $00 E $00 H $03 L $00 SP 03f1
+0000 00b4 POP    PSW     	.....  A $03 B $02 C $1b D $00 E $00 H $03 L $00 SP 03f3
+0000 00b5 POP    D       	.....  A $03 B $02 C $1b D $00 E $00 H $03 L $00 SP 03f5
+0000 00b6 POP    H       	.....  A $03 B $02 C $1b D $00 E $00 H $02 L $30 SP 03f7
+0000 00b7 EI             	.....  A $03 B $02 C $1b D $00 E $00 H $02 L $30 SP 03f7
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	.....  A $03 B $02 C $1b D $02 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 9
+0000 0230 INR    D       	..p..  A $03 B $02 C $1b D $03 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 14
+0000 0231 LDAX   D       	..p..  A $04 B $02 C $1b D $03 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 21
+0000 0232 MOV    E,A     	..p..  A $04 B $02 C $1b D $03 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 26
+0000 0233 DCR    D       	.....  A $04 B $02 C $1b D $02 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 31
+0000 0234 CMP    D       	.....  A $04 B $02 C $1b D $02 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 35
+0000 0235 JNZ    $0230   	.....  A $04 B $02 C $1b D $02 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 45
+0000 0230 INR    D       	..p..  A $04 B $02 C $1b D $03 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 50
+0000 0231 LDAX   D       	..p..  A $00 B $02 C $1b D $03 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 57
+0000 0232 MOV    E,A     	..p..  A $00 B $02 C $1b D $03 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 62
+0000 0233 DCR    D       	.....  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 67
+0000 0234 CMP    D       	.s.c.  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 71
+0000 0235 JNZ    $0230   	.s.c.  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 81
+Interrupt: 81
+	.s.c.  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03f9
+Scheduler Timer is: 11
+
+
+
+
+
+0000 0028 DI             	.s.c.  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03f9
+0000 0029 LXI    H,#$010a	.s.c.  A $00 B $02 C $1b D $02 E $00 H $01 L $0a SP 03f9
+0000 002c MOV    B,M     	.s.c.  A $00 B $02 C $1b D $02 E $00 H $01 L $0a SP 03f9
+0000 002d MVI    C,#$ff  	.s.c.  A $00 B $02 C $ff D $02 E $00 H $01 L $0a SP 03f9
+0000 002f INX    B       	.s.c.  A $00 B $03 C $00 D $02 E $00 H $01 L $0a SP 03f9
+0000 0030 MOV    H,B     	.s.c.  A $00 B $03 C $00 D $02 E $00 H $03 L $0a SP 03f9
+0000 0031 MOV    L,C     	.s.c.  A $00 B $03 C $00 D $02 E $00 H $03 L $00 SP 03f9
+0000 0032 MOV    B,M     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $00 SP 03f9
+0000 0033 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $01 SP 03f9
+0000 0034 MOV    C,M     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $01 SP 03f9
+0000 0035 PUSH   B       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $01 SP 03f7
+0000 0036 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $02 SP 03f7
+0000 0037 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $03 SP 03f7
+0000 0038 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $04 SP 03f7
+0000 0039 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $05 SP 03f7
+0000 003a LDA    $0100   	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $05 SP 03f7
+0000 003d MOV    M,A     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $05 SP 03f7
+0000 003e INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $06 SP 03f7
+0000 003f LDA    $0101   	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $06 SP 03f7
+0000 0042 MOV    M,A     	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $06 SP 03f7
+0000 0043 INX    H       	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $07 SP 03f7
+0000 0044 LDA    $0102   	.s.c.  A $1b B $04 C $00 D $02 E $00 H $03 L $07 SP 03f7
+0000 0047 MOV    M,A     	.s.c.  A $1b B $04 C $00 D $02 E $00 H $03 L $07 SP 03f7
+0000 0048 INX    H       	.s.c.  A $1b B $04 C $00 D $02 E $00 H $03 L $08 SP 03f7
+0000 0049 LDA    $0103   	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $08 SP 03f7
+0000 004c MOV    M,A     	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $08 SP 03f7
+0000 004d INX    H       	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $09 SP 03f7
+0000 004e LDA    $0104   	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $09 SP 03f7
+0000 0051 MOV    M,A     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $09 SP 03f7
+0000 0052 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $0a SP 03f7
+0000 0053 LDA    $0105   	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0a SP 03f7
+0000 0056 MOV    M,A     	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0a SP 03f7
+0000 0057 INX    H       	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0b SP 03f7
+0000 0058 LDA    $0106   	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $0b SP 03f7
+0000 005b MOV    M,A     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $0b SP 03f7
+0000 005c INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $0c SP 03f7
+0000 005d LDA    $0107   	.s.c.  A $fb B $04 C $00 D $02 E $00 H $03 L $0c SP 03f7
+0000 0060 MOV    M,A     	.s.c.  A $fb B $04 C $00 D $02 E $00 H $03 L $0c SP 03f7
+0000 0061 INX    H       	.s.c.  A $fb B $04 C $00 D $02 E $00 H $03 L $0d SP 03f7
+0000 0062 LDA    $0108   	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0d SP 03f7
+0000 0065 MOV    M,A     	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0d SP 03f7
+0000 0066 INX    H       	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0e SP 03f7
+0000 0067 LDA    $0109   	.s.c.  A $30 B $04 C $00 D $02 E $00 H $03 L $0e SP 03f7
+0000 006a MOV    M,A     	.s.c.  A $30 B $04 C $00 D $02 E $00 H $03 L $0e SP 03f7
+0000 006b INX    H       	.s.c.  A $30 B $04 C $00 D $02 E $00 H $03 L $0f SP 03f7
+0000 006c LDA    $010a   	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $0f SP 03f7
+0000 006f MOV    M,A     	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $0f SP 03f7
+0000 0070 INX    H       	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $10 SP 03f7
+0000 0071 LDA    $010b   	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $10 SP 03f7
+0000 0074 MOV    M,A     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $10 SP 03f7
+0000 0075 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $11 SP 03f7
+0000 0076 LDA    $010c   	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $11 SP 03f7
+0000 0079 MOV    M,A     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $11 SP 03f7
+0000 007a INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $12 SP 03f7
+0000 007b LDA    $010d   	.s.c.  A $81 B $04 C $00 D $02 E $00 H $03 L $12 SP 03f7
+0000 007e MOV    M,A     	.s.c.  A $81 B $04 C $00 D $02 E $00 H $03 L $12 SP 03f7
+0000 007f POP    H       	.s.c.  A $81 B $04 C $00 D $02 E $00 H $04 L $00 SP 03f9
+0000 0080 INR    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $00 SP 03f9
+0000 0081 INX    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $01 SP 03f9
+0000 0082 INX    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $02 SP 03f9
+0000 0083 INX    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $03 SP 03f9
+0000 0084 INX    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $04 SP 03f9
+0000 0085 INX    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $05 SP 03f9
+0000 0086 MOV    A,M     	..pc.  A $ff B $04 C $00 D $02 E $00 H $05 L $05 SP 03f9
+0000 0087 INX    H       	..pc.  A $ff B $04 C $00 D $02 E $00 H $05 L $06 SP 03f9
+0000 0088 MOV    B,M     	..pc.  A $ff B $01 C $00 D $02 E $00 H $05 L $06 SP 03f9
+0000 0089 INX    H       	..pc.  A $ff B $01 C $00 D $02 E $00 H $05 L $07 SP 03f9
+0000 008a MOV    C,M     	..pc.  A $ff B $01 C $01 D $02 E $00 H $05 L $07 SP 03f9
+0000 008b INX    H       	..pc.  A $ff B $01 C $01 D $02 E $00 H $05 L $08 SP 03f9
+0000 008c INX    H       	..pc.  A $ff B $01 C $01 D $02 E $00 H $05 L $09 SP 03f9
+0000 008d INX    H       	..pc.  A $ff B $01 C $01 D $02 E $00 H $05 L $0a SP 03f9
+0000 008e INX    H       	..pc.  A $ff B $01 C $01 D $02 E $00 H $05 L $0b SP 03f9
+0000 008f INX    H       	..pc.  A $ff B $01 C $01 D $02 E $00 H $05 L $0c SP 03f9
+0000 0090 MOV    E,M     	..pc.  A $ff B $01 C $01 D $02 E $ff H $05 L $0c SP 03f9
+0000 0091 INX    H       	..pc.  A $ff B $01 C $01 D $02 E $ff H $05 L $0d SP 03f9
+0000 0092 MOV    D,M     	..pc.  A $ff B $01 C $01 D $05 E $ff H $05 L $0d SP 03f9
+0000 0093 XCHG           	..pc.  A $ff B $01 C $01 D $05 E $0d H $05 L $ff SP 03f9
+0000 0094 SPHL           	..pc.  A $ff B $01 C $01 D $05 E $0d H $05 L $ff SP 05ff
+0000 0095 XCHG           	..pc.  A $ff B $01 C $01 D $05 E $ff H $05 L $0d SP 05ff
+0000 0096 DCX    H       	..pc.  A $ff B $01 C $01 D $05 E $ff H $05 L $0c SP 05ff
+0000 0097 DCX    H       	..pc.  A $ff B $01 C $01 D $05 E $ff H $05 L $0b SP 05ff
+0000 0098 DCX    H       	..pc.  A $ff B $01 C $01 D $05 E $ff H $05 L $0a SP 05ff
+0000 0099 DCX    H       	..pc.  A $ff B $01 C $01 D $05 E $ff H $05 L $09 SP 05ff
+0000 009a MOV    E,M     	..pc.  A $ff B $01 C $01 D $05 E $01 H $05 L $09 SP 05ff
+0000 009b DCX    H       	..pc.  A $ff B $01 C $01 D $05 E $01 H $05 L $08 SP 05ff
+0000 009c MOV    D,M     	..pc.  A $ff B $01 C $01 D $02 E $01 H $05 L $08 SP 05ff
+0000 009d PUSH   D       	..pc.  A $ff B $01 C $01 D $02 E $01 H $05 L $08 SP 05fd
+0000 009e INX    H       	..pc.  A $ff B $01 C $01 D $02 E $01 H $05 L $09 SP 05fd
+0000 009f INX    H       	..pc.  A $ff B $01 C $01 D $02 E $01 H $05 L $0a SP 05fd
+0000 00a0 MOV    D,M     	..pc.  A $ff B $01 C $01 D $00 E $01 H $05 L $0a SP 05fd
+0000 00a1 INX    H       	..pc.  A $ff B $01 C $01 D $00 E $01 H $05 L $0b SP 05fd
+0000 00a2 MOV    E,M     	..pc.  A $ff B $01 C $01 D $00 E $00 H $05 L $0b SP 05fd
+0000 00a3 PUSH   D       	..pc.  A $ff B $01 C $01 D $00 E $00 H $05 L $0b SP 05fb
+0000 00a4 INX    H       	..pc.  A $ff B $01 C $01 D $00 E $00 H $05 L $0c SP 05fb
+0000 00a5 INX    H       	..pc.  A $ff B $01 C $01 D $00 E $00 H $05 L $0d SP 05fb
+0000 00a6 INX    H       	..pc.  A $ff B $01 C $01 D $00 E $00 H $05 L $0e SP 05fb
+0000 00a7 MOV    E,M     	..pc.  A $ff B $01 C $01 D $00 E $11 H $05 L $0e SP 05fb
+0000 00a8 INX    H       	..pc.  A $ff B $01 C $01 D $00 E $11 H $05 L $0f SP 05fb
+0000 00a9 MOV    D,M     	..pc.  A $ff B $01 C $01 D $04 E $11 H $05 L $0f SP 05fb
+0000 00aa PUSH   D       	..pc.  A $ff B $01 C $01 D $04 E $11 H $05 L $0f SP 05f9
+0000 00ab INX    H       	..pc.  A $ff B $01 C $01 D $04 E $11 H $05 L $10 SP 05f9
+0000 00ac MOV    D,M     	..pc.  A $ff B $01 C $01 D $00 E $11 H $05 L $10 SP 05f9
+0000 00ad INX    H       	..pc.  A $ff B $01 C $01 D $00 E $11 H $05 L $11 SP 05f9
+0000 00ae MOV    E,M     	..pc.  A $ff B $01 C $01 D $00 E $00 H $05 L $11 SP 05f9
+0000 00af PUSH   D       	..pc.  A $ff B $01 C $01 D $00 E $00 H $05 L $11 SP 05f7
+0000 00b0 INX    H       	..pc.  A $ff B $01 C $01 D $00 E $00 H $05 L $12 SP 05f7
+0000 00b1 MOV    L,M     	..pc.  A $ff B $01 C $01 D $00 E $00 H $05 L $85 SP 05f7
+0000 00b2 MOV    H,A     	..pc.  A $ff B $01 C $01 D $00 E $00 H $ff L $85 SP 05f7
+0000 00b3 PUSH   H       	..pc.  A $ff B $01 C $01 D $00 E $00 H $ff L $85 SP 05f5
+0000 00b4 POP    PSW     	.spc.  A $ff B $01 C $01 D $00 E $00 H $ff L $85 SP 05f7
+0000 00b5 POP    D       	.spc.  A $ff B $01 C $01 D $00 E $00 H $ff L $85 SP 05f9
+0000 00b6 POP    H       	.spc.  A $ff B $01 C $01 D $00 E $00 H $04 L $11 SP 05fb
+0000 00b7 EI             	.spc.  A $ff B $01 C $01 D $00 E $00 H $04 L $11 SP 05fb
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	.spc.  A $ff B $01 C $01 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 9
+0000 0411 MVI    A,#$04  	.spc.  A $04 B $01 C $01 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 16
+0000 0413 CALL   $0007   	.spc.  A $04 B $01 C $01 D $02 E $01 H $00 L $00 SP 05fd
+Scheduler Timer is: 33
+
+
+
+
+0000 0416 PUSH   B       	.spc.  A $04 B $01 C $01 D $02 E $01 H $00 L $00 SP 05fd
+Scheduler Timer is: 44
+0000 0417 LXI    B,#$0000	.spc.  A $04 B $00 C $00 D $02 E $01 H $00 L $00 SP 05fd
+Scheduler Timer is: 54
+0000 041a MVI    A,#$01  	.spc.  A $01 B $00 C $00 D $02 E $01 H $00 L $00 SP 05fd
+Scheduler Timer is: 61
+0000 041c CALL   $0007   	.spc.  A $01 B $00 C $00 D $02 E $01 H $00 L $00 SP 05fb
+Scheduler Timer is: 78
+
+
+
+
+0000 041f POP    B       	.spc.  A $01 B $01 C $01 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 88
+Interrupt: 88
+	.spc.  A $01 B $01 C $01 D $02 E $01 H $00 L $00 SP 05fd
+Scheduler Timer is: 11
+
+
+
+
+
+0000 0028 DI             	.spc.  A $01 B $01 C $01 D $02 E $01 H $00 L $00 SP 05fd
+0000 0029 LXI    H,#$010a	.spc.  A $01 B $01 C $01 D $02 E $01 H $01 L $0a SP 05fd
+0000 002c MOV    B,M     	.spc.  A $01 B $04 C $01 D $02 E $01 H $01 L $0a SP 05fd
+0000 002d MVI    C,#$ff  	.spc.  A $01 B $04 C $ff D $02 E $01 H $01 L $0a SP 05fd
+0000 002f INX    B       	.spc.  A $01 B $05 C $00 D $02 E $01 H $01 L $0a SP 05fd
+0000 0030 MOV    H,B     	.spc.  A $01 B $05 C $00 D $02 E $01 H $05 L $0a SP 05fd
+0000 0031 MOV    L,C     	.spc.  A $01 B $05 C $00 D $02 E $01 H $05 L $00 SP 05fd
+0000 0032 MOV    B,M     	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $00 SP 05fd
+0000 0033 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $01 SP 05fd
+0000 0034 MOV    C,M     	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $01 SP 05fd
+0000 0035 PUSH   B       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $01 SP 05fb
+0000 0036 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $02 SP 05fb
+0000 0037 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $03 SP 05fb
+0000 0038 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $04 SP 05fb
+0000 0039 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $05 SP 05fb
+0000 003a LDA    $0100   	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $05 SP 05fb
+0000 003d MOV    M,A     	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $05 SP 05fb
+0000 003e INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $06 SP 05fb
+0000 003f LDA    $0101   	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $06 SP 05fb
+0000 0042 MOV    M,A     	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $06 SP 05fb
+0000 0043 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $07 SP 05fb
+0000 0044 LDA    $0102   	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $07 SP 05fb
+0000 0047 MOV    M,A     	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $07 SP 05fb
+0000 0048 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $08 SP 05fb
+0000 0049 LDA    $0103   	.spc.  A $02 B $02 C $00 D $02 E $01 H $05 L $08 SP 05fb
+0000 004c MOV    M,A     	.spc.  A $02 B $02 C $00 D $02 E $01 H $05 L $08 SP 05fb
+0000 004d INX    H       	.spc.  A $02 B $02 C $00 D $02 E $01 H $05 L $09 SP 05fb
+0000 004e LDA    $0104   	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $09 SP 05fb
+0000 0051 MOV    M,A     	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $09 SP 05fb
+0000 0052 INX    H       	.spc.  A $01 B $02 C $00 D $02 E $01 H $05 L $0a SP 05fb
+0000 0053 LDA    $0105   	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0a SP 05fb
+0000 0056 MOV    M,A     	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0a SP 05fb
+0000 0057 INX    H       	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0b SP 05fb
+0000 0058 LDA    $0106   	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0b SP 05fb
+0000 005b MOV    M,A     	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0b SP 05fb
+0000 005c INX    H       	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $0c SP 05fb
+0000 005d LDA    $0107   	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $0c SP 05fb
+0000 0060 MOV    M,A     	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $0c SP 05fb
+0000 0061 INX    H       	.spc.  A $ff B $02 C $00 D $02 E $01 H $05 L $0d SP 05fb
+0000 0062 LDA    $0108   	.spc.  A $05 B $02 C $00 D $02 E $01 H $05 L $0d SP 05fb
+0000 0065 MOV    M,A     	.spc.  A $05 B $02 C $00 D $02 E $01 H $05 L $0d SP 05fb
+0000 0066 INX    H       	.spc.  A $05 B $02 C $00 D $02 E $01 H $05 L $0e SP 05fb
+0000 0067 LDA    $0109   	.spc.  A $20 B $02 C $00 D $02 E $01 H $05 L $0e SP 05fb
+0000 006a MOV    M,A     	.spc.  A $20 B $02 C $00 D $02 E $01 H $05 L $0e SP 05fb
+0000 006b INX    H       	.spc.  A $20 B $02 C $00 D $02 E $01 H $05 L $0f SP 05fb
+0000 006c LDA    $010a   	.spc.  A $04 B $02 C $00 D $02 E $01 H $05 L $0f SP 05fb
+0000 006f MOV    M,A     	.spc.  A $04 B $02 C $00 D $02 E $01 H $05 L $0f SP 05fb
+0000 0070 INX    H       	.spc.  A $04 B $02 C $00 D $02 E $01 H $05 L $10 SP 05fb
+0000 0071 LDA    $010b   	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $10 SP 05fb
+0000 0074 MOV    M,A     	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $10 SP 05fb
+0000 0075 INX    H       	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $11 SP 05fb
+0000 0076 LDA    $010c   	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $11 SP 05fb
+0000 0079 MOV    M,A     	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $11 SP 05fb
+0000 007a INX    H       	.spc.  A $00 B $02 C $00 D $02 E $01 H $05 L $12 SP 05fb
+0000 007b LDA    $010d   	.spc.  A $85 B $02 C $00 D $02 E $01 H $05 L $12 SP 05fb
+0000 007e MOV    M,A     	.spc.  A $85 B $02 C $00 D $02 E $01 H $05 L $12 SP 05fb
+0000 007f POP    H       	.spc.  A $85 B $02 C $00 D $02 E $01 H $02 L $00 SP 05fd
+0000 0080 INR    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $00 SP 05fd
+0000 0081 INX    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $01 SP 05fd
+0000 0082 INX    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $02 SP 05fd
+0000 0083 INX    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $03 SP 05fd
+0000 0084 INX    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $04 SP 05fd
+0000 0085 INX    H       	..pc.  A $85 B $02 C $00 D $02 E $01 H $03 L $05 SP 05fd
+0000 0086 MOV    A,M     	..pc.  A $00 B $02 C $00 D $02 E $01 H $03 L $05 SP 05fd
+0000 0087 INX    H       	..pc.  A $00 B $02 C $00 D $02 E $01 H $03 L $06 SP 05fd
+0000 0088 MOV    B,M     	..pc.  A $00 B $02 C $00 D $02 E $01 H $03 L $06 SP 05fd
+0000 0089 INX    H       	..pc.  A $00 B $02 C $00 D $02 E $01 H $03 L $07 SP 05fd
+0000 008a MOV    C,M     	..pc.  A $00 B $02 C $1b D $02 E $01 H $03 L $07 SP 05fd
+0000 008b INX    H       	..pc.  A $00 B $02 C $1b D $02 E $01 H $03 L $08 SP 05fd
+0000 008c INX    H       	..pc.  A $00 B $02 C $1b D $02 E $01 H $03 L $09 SP 05fd
+0000 008d INX    H       	..pc.  A $00 B $02 C $1b D $02 E $01 H $03 L $0a SP 05fd
+0000 008e INX    H       	..pc.  A $00 B $02 C $1b D $02 E $01 H $03 L $0b SP 05fd
+0000 008f INX    H       	..pc.  A $00 B $02 C $1b D $02 E $01 H $03 L $0c SP 05fd
+0000 0090 MOV    E,M     	..pc.  A $00 B $02 C $1b D $02 E $fb H $03 L $0c SP 05fd
+0000 0091 INX    H       	..pc.  A $00 B $02 C $1b D $02 E $fb H $03 L $0d SP 05fd
+0000 0092 MOV    D,M     	..pc.  A $00 B $02 C $1b D $03 E $fb H $03 L $0d SP 05fd
+0000 0093 XCHG           	..pc.  A $00 B $02 C $1b D $03 E $0d H $03 L $fb SP 05fd
+0000 0094 SPHL           	..pc.  A $00 B $02 C $1b D $03 E $0d H $03 L $fb SP 03fb
+0000 0095 XCHG           	..pc.  A $00 B $02 C $1b D $03 E $fb H $03 L $0d SP 03fb
+0000 0096 DCX    H       	..pc.  A $00 B $02 C $1b D $03 E $fb H $03 L $0c SP 03fb
+0000 0097 DCX    H       	..pc.  A $00 B $02 C $1b D $03 E $fb H $03 L $0b SP 03fb
+0000 0098 DCX    H       	..pc.  A $00 B $02 C $1b D $03 E $fb H $03 L $0a SP 03fb
+0000 0099 DCX    H       	..pc.  A $00 B $02 C $1b D $03 E $fb H $03 L $09 SP 03fb
+0000 009a MOV    E,M     	..pc.  A $00 B $02 C $1b D $03 E $00 H $03 L $09 SP 03fb
+0000 009b DCX    H       	..pc.  A $00 B $02 C $1b D $03 E $00 H $03 L $08 SP 03fb
+0000 009c MOV    D,M     	..pc.  A $00 B $02 C $1b D $02 E $00 H $03 L $08 SP 03fb
+0000 009d PUSH   D       	..pc.  A $00 B $02 C $1b D $02 E $00 H $03 L $08 SP 03f9
+0000 009e INX    H       	..pc.  A $00 B $02 C $1b D $02 E $00 H $03 L $09 SP 03f9
+0000 009f INX    H       	..pc.  A $00 B $02 C $1b D $02 E $00 H $03 L $0a SP 03f9
+0000 00a0 MOV    D,M     	..pc.  A $00 B $02 C $1b D $03 E $00 H $03 L $0a SP 03f9
+0000 00a1 INX    H       	..pc.  A $00 B $02 C $1b D $03 E $00 H $03 L $0b SP 03f9
+0000 00a2 MOV    E,M     	..pc.  A $00 B $02 C $1b D $03 E $00 H $03 L $0b SP 03f9
+0000 00a3 PUSH   D       	..pc.  A $00 B $02 C $1b D $03 E $00 H $03 L $0b SP 03f7
+0000 00a4 INX    H       	..pc.  A $00 B $02 C $1b D $03 E $00 H $03 L $0c SP 03f7
+0000 00a5 INX    H       	..pc.  A $00 B $02 C $1b D $03 E $00 H $03 L $0d SP 03f7
+0000 00a6 INX    H       	..pc.  A $00 B $02 C $1b D $03 E $00 H $03 L $0e SP 03f7
+0000 00a7 MOV    E,M     	..pc.  A $00 B $02 C $1b D $03 E $30 H $03 L $0e SP 03f7
+0000 00a8 INX    H       	..pc.  A $00 B $02 C $1b D $03 E $30 H $03 L $0f SP 03f7
+0000 00a9 MOV    D,M     	..pc.  A $00 B $02 C $1b D $02 E $30 H $03 L $0f SP 03f7
+0000 00aa PUSH   D       	..pc.  A $00 B $02 C $1b D $02 E $30 H $03 L $0f SP 03f5
+0000 00ab INX    H       	..pc.  A $00 B $02 C $1b D $02 E $30 H $03 L $10 SP 03f5
+0000 00ac MOV    D,M     	..pc.  A $00 B $02 C $1b D $00 E $30 H $03 L $10 SP 03f5
+0000 00ad INX    H       	..pc.  A $00 B $02 C $1b D $00 E $30 H $03 L $11 SP 03f5
+0000 00ae MOV    E,M     	..pc.  A $00 B $02 C $1b D $00 E $00 H $03 L $11 SP 03f5
+0000 00af PUSH   D       	..pc.  A $00 B $02 C $1b D $00 E $00 H $03 L $11 SP 03f3
+0000 00b0 INX    H       	..pc.  A $00 B $02 C $1b D $00 E $00 H $03 L $12 SP 03f3
+0000 00b1 MOV    L,M     	..pc.  A $00 B $02 C $1b D $00 E $00 H $03 L $81 SP 03f3
+0000 00b2 MOV    H,A     	..pc.  A $00 B $02 C $1b D $00 E $00 H $00 L $81 SP 03f3
+0000 00b3 PUSH   H       	..pc.  A $00 B $02 C $1b D $00 E $00 H $00 L $81 SP 03f1
+0000 00b4 POP    PSW     	.s.c.  A $00 B $02 C $1b D $00 E $00 H $00 L $81 SP 03f3
+0000 00b5 POP    D       	.s.c.  A $00 B $02 C $1b D $00 E $00 H $00 L $81 SP 03f5
+0000 00b6 POP    H       	.s.c.  A $00 B $02 C $1b D $00 E $00 H $02 L $30 SP 03f7
+0000 00b7 EI             	.s.c.  A $00 B $02 C $1b D $00 E $00 H $02 L $30 SP 03f7
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	.s.c.  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 9
+0000 0230 INR    D       	..pc.  A $00 B $02 C $1b D $03 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 14
+0000 0231 LDAX   D       	..pc.  A $04 B $02 C $1b D $03 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 21
+0000 0232 MOV    E,A     	..pc.  A $04 B $02 C $1b D $03 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 26
+0000 0233 DCR    D       	...c.  A $04 B $02 C $1b D $02 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 31
+0000 0234 CMP    D       	.....  A $04 B $02 C $1b D $02 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 35
+0000 0235 JNZ    $0230   	.....  A $04 B $02 C $1b D $02 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 45
+0000 0230 INR    D       	..p..  A $04 B $02 C $1b D $03 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 50
+0000 0231 LDAX   D       	..p..  A $00 B $02 C $1b D $03 E $04 H $03 L $00 SP 03fb
+Scheduler Timer is: 57
+0000 0232 MOV    E,A     	..p..  A $00 B $02 C $1b D $03 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 62
+0000 0233 DCR    D       	.....  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 67
+0000 0234 CMP    D       	.s.c.  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 71
+0000 0235 JNZ    $0230   	.s.c.  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03fb
+Scheduler Timer is: 81
+Interrupt: 81
+	.s.c.  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03f9
+Scheduler Timer is: 11
+
+
+
+
+
+0000 0028 DI             	.s.c.  A $00 B $02 C $1b D $02 E $00 H $03 L $00 SP 03f9
+0000 0029 LXI    H,#$010a	.s.c.  A $00 B $02 C $1b D $02 E $00 H $01 L $0a SP 03f9
+0000 002c MOV    B,M     	.s.c.  A $00 B $02 C $1b D $02 E $00 H $01 L $0a SP 03f9
+0000 002d MVI    C,#$ff  	.s.c.  A $00 B $02 C $ff D $02 E $00 H $01 L $0a SP 03f9
+0000 002f INX    B       	.s.c.  A $00 B $03 C $00 D $02 E $00 H $01 L $0a SP 03f9
+0000 0030 MOV    H,B     	.s.c.  A $00 B $03 C $00 D $02 E $00 H $03 L $0a SP 03f9
+0000 0031 MOV    L,C     	.s.c.  A $00 B $03 C $00 D $02 E $00 H $03 L $00 SP 03f9
+0000 0032 MOV    B,M     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $00 SP 03f9
+0000 0033 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $01 SP 03f9
+0000 0034 MOV    C,M     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $01 SP 03f9
+0000 0035 PUSH   B       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $01 SP 03f7
+0000 0036 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $02 SP 03f7
+0000 0037 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $03 SP 03f7
+0000 0038 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $04 SP 03f7
+0000 0039 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $05 SP 03f7
+0000 003a LDA    $0100   	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $05 SP 03f7
+0000 003d MOV    M,A     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $05 SP 03f7
+0000 003e INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $06 SP 03f7
+0000 003f LDA    $0101   	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $06 SP 03f7
+0000 0042 MOV    M,A     	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $06 SP 03f7
+0000 0043 INX    H       	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $07 SP 03f7
+0000 0044 LDA    $0102   	.s.c.  A $1b B $04 C $00 D $02 E $00 H $03 L $07 SP 03f7
+0000 0047 MOV    M,A     	.s.c.  A $1b B $04 C $00 D $02 E $00 H $03 L $07 SP 03f7
+0000 0048 INX    H       	.s.c.  A $1b B $04 C $00 D $02 E $00 H $03 L $08 SP 03f7
+0000 0049 LDA    $0103   	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $08 SP 03f7
+0000 004c MOV    M,A     	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $08 SP 03f7
+0000 004d INX    H       	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $09 SP 03f7
+0000 004e LDA    $0104   	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $09 SP 03f7
+0000 0051 MOV    M,A     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $09 SP 03f7
+0000 0052 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $0a SP 03f7
+0000 0053 LDA    $0105   	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0a SP 03f7
+0000 0056 MOV    M,A     	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0a SP 03f7
+0000 0057 INX    H       	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0b SP 03f7
+0000 0058 LDA    $0106   	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $0b SP 03f7
+0000 005b MOV    M,A     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $0b SP 03f7
+0000 005c INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $0c SP 03f7
+0000 005d LDA    $0107   	.s.c.  A $fb B $04 C $00 D $02 E $00 H $03 L $0c SP 03f7
+0000 0060 MOV    M,A     	.s.c.  A $fb B $04 C $00 D $02 E $00 H $03 L $0c SP 03f7
+0000 0061 INX    H       	.s.c.  A $fb B $04 C $00 D $02 E $00 H $03 L $0d SP 03f7
+0000 0062 LDA    $0108   	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0d SP 03f7
+0000 0065 MOV    M,A     	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0d SP 03f7
+0000 0066 INX    H       	.s.c.  A $03 B $04 C $00 D $02 E $00 H $03 L $0e SP 03f7
+0000 0067 LDA    $0109   	.s.c.  A $30 B $04 C $00 D $02 E $00 H $03 L $0e SP 03f7
+0000 006a MOV    M,A     	.s.c.  A $30 B $04 C $00 D $02 E $00 H $03 L $0e SP 03f7
+0000 006b INX    H       	.s.c.  A $30 B $04 C $00 D $02 E $00 H $03 L $0f SP 03f7
+0000 006c LDA    $010a   	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $0f SP 03f7
+0000 006f MOV    M,A     	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $0f SP 03f7
+0000 0070 INX    H       	.s.c.  A $02 B $04 C $00 D $02 E $00 H $03 L $10 SP 03f7
+0000 0071 LDA    $010b   	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $10 SP 03f7
+0000 0074 MOV    M,A     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $10 SP 03f7
+0000 0075 INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $11 SP 03f7
+0000 0076 LDA    $010c   	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $11 SP 03f7
+0000 0079 MOV    M,A     	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $11 SP 03f7
+0000 007a INX    H       	.s.c.  A $00 B $04 C $00 D $02 E $00 H $03 L $12 SP 03f7
+0000 007b LDA    $010d   	.s.c.  A $81 B $04 C $00 D $02 E $00 H $03 L $12 SP 03f7
+0000 007e MOV    M,A     	.s.c.  A $81 B $04 C $00 D $02 E $00 H $03 L $12 SP 03f7
+0000 007f POP    H       	.s.c.  A $81 B $04 C $00 D $02 E $00 H $04 L $00 SP 03f9
+0000 0080 INR    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $00 SP 03f9
+0000 0081 INX    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $01 SP 03f9
+0000 0082 INX    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $02 SP 03f9
+0000 0083 INX    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $03 SP 03f9
+0000 0084 INX    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $04 SP 03f9
+0000 0085 INX    H       	..pc.  A $81 B $04 C $00 D $02 E $00 H $05 L $05 SP 03f9
+0000 0086 MOV    A,M     	..pc.  A $01 B $04 C $00 D $02 E $00 H $05 L $05 SP 03f9
+0000 0087 INX    H       	..pc.  A $01 B $04 C $00 D $02 E $00 H $05 L $06 SP 03f9
+0000 0088 MOV    B,M     	..pc.  A $01 B $01 C $00 D $02 E $00 H $05 L $06 SP 03f9
+0000 0089 INX    H       	..pc.  A $01 B $01 C $00 D $02 E $00 H $05 L $07 SP 03f9
+0000 008a MOV    C,M     	..pc.  A $01 B $01 C $01 D $02 E $00 H $05 L $07 SP 03f9
+0000 008b INX    H       	..pc.  A $01 B $01 C $01 D $02 E $00 H $05 L $08 SP 03f9
+0000 008c INX    H       	..pc.  A $01 B $01 C $01 D $02 E $00 H $05 L $09 SP 03f9
+0000 008d INX    H       	..pc.  A $01 B $01 C $01 D $02 E $00 H $05 L $0a SP 03f9
+0000 008e INX    H       	..pc.  A $01 B $01 C $01 D $02 E $00 H $05 L $0b SP 03f9
+0000 008f INX    H       	..pc.  A $01 B $01 C $01 D $02 E $00 H $05 L $0c SP 03f9
+0000 0090 MOV    E,M     	..pc.  A $01 B $01 C $01 D $02 E $ff H $05 L $0c SP 03f9
+0000 0091 INX    H       	..pc.  A $01 B $01 C $01 D $02 E $ff H $05 L $0d SP 03f9
+0000 0092 MOV    D,M     	..pc.  A $01 B $01 C $01 D $05 E $ff H $05 L $0d SP 03f9
+0000 0093 XCHG           	..pc.  A $01 B $01 C $01 D $05 E $0d H $05 L $ff SP 03f9
+0000 0094 SPHL           	..pc.  A $01 B $01 C $01 D $05 E $0d H $05 L $ff SP 05ff
+0000 0095 XCHG           	..pc.  A $01 B $01 C $01 D $05 E $ff H $05 L $0d SP 05ff
+0000 0096 DCX    H       	..pc.  A $01 B $01 C $01 D $05 E $ff H $05 L $0c SP 05ff
+0000 0097 DCX    H       	..pc.  A $01 B $01 C $01 D $05 E $ff H $05 L $0b SP 05ff
+0000 0098 DCX    H       	..pc.  A $01 B $01 C $01 D $05 E $ff H $05 L $0a SP 05ff
+0000 0099 DCX    H       	..pc.  A $01 B $01 C $01 D $05 E $ff H $05 L $09 SP 05ff
+0000 009a MOV    E,M     	..pc.  A $01 B $01 C $01 D $05 E $01 H $05 L $09 SP 05ff
+0000 009b DCX    H       	..pc.  A $01 B $01 C $01 D $05 E $01 H $05 L $08 SP 05ff
+0000 009c MOV    D,M     	..pc.  A $01 B $01 C $01 D $02 E $01 H $05 L $08 SP 05ff
+0000 009d PUSH   D       	..pc.  A $01 B $01 C $01 D $02 E $01 H $05 L $08 SP 05fd
+0000 009e INX    H       	..pc.  A $01 B $01 C $01 D $02 E $01 H $05 L $09 SP 05fd
+0000 009f INX    H       	..pc.  A $01 B $01 C $01 D $02 E $01 H $05 L $0a SP 05fd
+0000 00a0 MOV    D,M     	..pc.  A $01 B $01 C $01 D $00 E $01 H $05 L $0a SP 05fd
+0000 00a1 INX    H       	..pc.  A $01 B $01 C $01 D $00 E $01 H $05 L $0b SP 05fd
+0000 00a2 MOV    E,M     	..pc.  A $01 B $01 C $01 D $00 E $00 H $05 L $0b SP 05fd
+0000 00a3 PUSH   D       	..pc.  A $01 B $01 C $01 D $00 E $00 H $05 L $0b SP 05fb
+0000 00a4 INX    H       	..pc.  A $01 B $01 C $01 D $00 E $00 H $05 L $0c SP 05fb
+0000 00a5 INX    H       	..pc.  A $01 B $01 C $01 D $00 E $00 H $05 L $0d SP 05fb
+0000 00a6 INX    H       	..pc.  A $01 B $01 C $01 D $00 E $00 H $05 L $0e SP 05fb
+0000 00a7 MOV    E,M     	..pc.  A $01 B $01 C $01 D $00 E $20 H $05 L $0e SP 05fb
+0000 00a8 INX    H       	..pc.  A $01 B $01 C $01 D $00 E $20 H $05 L $0f SP 05fb
+0000 00a9 MOV    D,M     	..pc.  A $01 B $01 C $01 D $04 E $20 H $05 L $0f SP 05fb
+0000 00aa PUSH   D       	..pc.  A $01 B $01 C $01 D $04 E $20 H $05 L $0f SP 05f9
+0000 00ab INX    H       	..pc.  A $01 B $01 C $01 D $04 E $20 H $05 L $10 SP 05f9
+0000 00ac MOV    D,M     	..pc.  A $01 B $01 C $01 D $00 E $20 H $05 L $10 SP 05f9
+0000 00ad INX    H       	..pc.  A $01 B $01 C $01 D $00 E $20 H $05 L $11 SP 05f9
+0000 00ae MOV    E,M     	..pc.  A $01 B $01 C $01 D $00 E $00 H $05 L $11 SP 05f9
+0000 00af PUSH   D       	..pc.  A $01 B $01 C $01 D $00 E $00 H $05 L $11 SP 05f7
+0000 00b0 INX    H       	..pc.  A $01 B $01 C $01 D $00 E $00 H $05 L $12 SP 05f7
+0000 00b1 MOV    L,M     	..pc.  A $01 B $01 C $01 D $00 E $00 H $05 L $85 SP 05f7
+0000 00b2 MOV    H,A     	..pc.  A $01 B $01 C $01 D $00 E $00 H $01 L $85 SP 05f7
+0000 00b3 PUSH   H       	..pc.  A $01 B $01 C $01 D $00 E $00 H $01 L $85 SP 05f5
+0000 00b4 POP    PSW     	.spc.  A $01 B $01 C $01 D $00 E $00 H $01 L $85 SP 05f7
+0000 00b5 POP    D       	.spc.  A $01 B $01 C $01 D $00 E $00 H $01 L $85 SP 05f9
+0000 00b6 POP    H       	.spc.  A $01 B $01 C $01 D $00 E $00 H $04 L $20 SP 05fb
+0000 00b7 EI             	.spc.  A $01 B $01 C $01 D $00 E $00 H $04 L $20 SP 05fb
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	.spc.  A $01 B $01 C $01 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 9
+0000 0420 INR    C       	...c.  A $01 B $01 C $02 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 14
+0000 0421 MOV    A,C     	...c.  A $02 B $01 C $02 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 19
+0000 0422 SUB    D       	z.p..  A $00 B $01 C $02 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 23
+0000 0423 JZ     $0039   	z.p..  A $00 B $01 C $02 D $02 E $01 H $00 L $00 SP 05ff
+Scheduler Timer is: 33
+0000 0039 INX    H       	z.p..  A $00 B $01 C $02 D $02 E $01 H $00 L $01 SP 05ff
+Scheduler Timer is: 38
+0000 003a LDA    $0100   	z.p..  A $00 B $01 C $02 D $02 E $01 H $00 L $01 SP 05ff
+Scheduler Timer is: 51
+0000 003d MOV    M,A     	z.p..  A $00 B $01 C $02 D $02 E $01 H $00 L $01 SP 05ff
+Scheduler Timer is: 58
+0000 003e INX    H       	z.p..  A $00 B $01 C $02 D $02 E $01 H $00 L $02 SP 05ff
+Scheduler Timer is: 63
+0000 003f LDA    $0101   	z.p..  A $02 B $01 C $02 D $02 E $01 H $00 L $02 SP 05ff
+Scheduler Timer is: 76
+0000 0042 MOV    M,A     	z.p..  A $02 B $01 C $02 D $02 E $01 H $00 L $02 SP 05ff
+Scheduler Timer is: 83
+Interrupt: 83
+	z.p..  A $02 B $01 C $02 D $02 E $01 H $00 L $02 SP 05fd
+Scheduler Timer is: 11
+
+
+
+
+
+0000 0028 DI             	z.p..  A $02 B $01 C $02 D $02 E $01 H $00 L $02 SP 05fd
+0000 0029 LXI    H,#$010a	z.p..  A $02 B $01 C $02 D $02 E $01 H $01 L $0a SP 05fd
+0000 002c MOV    B,M     	z.p..  A $02 B $00 C $02 D $02 E $01 H $01 L $0a SP 05fd
+0000 002d MVI    C,#$ff  	z.p..  A $02 B $00 C $ff D $02 E $01 H $01 L $0a SP 05fd
+0000 002f INX    B       	z.p..  A $02 B $01 C $00 D $02 E $01 H $01 L $0a SP 05fd
+0000 0030 MOV    H,B     	z.p..  A $02 B $01 C $00 D $02 E $01 H $01 L $0a SP 05fd
+0000 0031 MOV    L,C     	z.p..  A $02 B $01 C $00 D $02 E $01 H $01 L $00 SP 05fd
+0000 0032 MOV    B,M     	z.p..  A $02 B $02 C $00 D $02 E $01 H $01 L $00 SP 05fd
+0000 0033 INX    H       	z.p..  A $02 B $02 C $00 D $02 E $01 H $01 L $01 SP 05fd
+0000 0034 MOV    C,M     	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $01 SP 05fd
+0000 0035 PUSH   B       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $01 SP 05fb
+0000 0036 INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $02 SP 05fb
+0000 0037 INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $03 SP 05fb
+0000 0038 INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $04 SP 05fb
+0000 0039 INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $05 SP 05fb
+0000 003a LDA    $0100   	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $05 SP 05fb
+0000 003d MOV    M,A     	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $05 SP 05fb
+0000 003e INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $06 SP 05fb
+0000 003f LDA    $0101   	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $06 SP 05fb
+0000 0042 MOV    M,A     	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $06 SP 05fb
+0000 0043 INX    H       	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $07 SP 05fb
+0000 0044 LDA    $0102   	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $07 SP 05fb
+0000 0047 MOV    M,A     	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $07 SP 05fb
+0000 0048 INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $08 SP 05fb
+0000 0049 LDA    $0103   	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $08 SP 05fb
+0000 004c MOV    M,A     	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $08 SP 05fb
+0000 004d INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $09 SP 05fb
+0000 004e LDA    $0104   	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $09 SP 05fb
+0000 0051 MOV    M,A     	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $09 SP 05fb
+0000 0052 INX    H       	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $0a SP 05fb
+0000 0053 LDA    $0105   	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0a SP 05fb
+0000 0056 MOV    M,A     	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0a SP 05fb
+0000 0057 INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0b SP 05fb
+0000 0058 LDA    $0106   	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $0b SP 05fb
+0000 005b MOV    M,A     	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $0b SP 05fb
+0000 005c INX    H       	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $0c SP 05fb
+0000 005d LDA    $0107   	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0c SP 05fb
+0000 0060 MOV    M,A     	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0c SP 05fb
+0000 0061 INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0d SP 05fb
+0000 0062 LDA    $0108   	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0d SP 05fb
+0000 0065 MOV    M,A     	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0d SP 05fb
+0000 0066 INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0e SP 05fb
+0000 0067 LDA    $0109   	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $0e SP 05fb
+0000 006a MOV    M,A     	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $0e SP 05fb
+0000 006b INX    H       	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $0f SP 05fb
+0000 006c LDA    $010a   	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0f SP 05fb
+0000 006f MOV    M,A     	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $0f SP 05fb
+0000 0070 INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $10 SP 05fb
+0000 0071 LDA    $010b   	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $10 SP 05fb
+0000 0074 MOV    M,A     	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $10 SP 05fb
+0000 0075 INX    H       	z.p..  A $01 B $02 C $01 D $02 E $01 H $01 L $11 SP 05fb
+0000 0076 LDA    $010c   	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $11 SP 05fb
+0000 0079 MOV    M,A     	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $11 SP 05fb
+0000 007a INX    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $12 SP 05fb
+0000 007b LDA    $010d   	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $12 SP 05fb
+0000 007e MOV    M,A     	z.p..  A $02 B $02 C $01 D $02 E $01 H $01 L $12 SP 05fb
+0000 007f POP    H       	z.p..  A $02 B $02 C $01 D $02 E $01 H $02 L $01 SP 05fd
+0000 0080 INR    H       	..p..  A $02 B $02 C $01 D $02 E $01 H $03 L $01 SP 05fd
+0000 0081 INX    H       	..p..  A $02 B $02 C $01 D $02 E $01 H $03 L $02 SP 05fd
+0000 0082 INX    H       	..p..  A $02 B $02 C $01 D $02 E $01 H $03 L $03 SP 05fd
+0000 0083 INX    H       	..p..  A $02 B $02 C $01 D $02 E $01 H $03 L $04 SP 05fd
+0000 0084 INX    H       	..p..  A $02 B $02 C $01 D $02 E $01 H $03 L $05 SP 05fd
+0000 0085 INX    H       	..p..  A $02 B $02 C $01 D $02 E $01 H $03 L $06 SP 05fd
+0000 0086 MOV    A,M     	..p..  A $02 B $02 C $01 D $02 E $01 H $03 L $06 SP 05fd
+0000 0087 INX    H       	..p..  A $02 B $02 C $01 D $02 E $01 H $03 L $07 SP 05fd
+0000 0088 MOV    B,M     	..p..  A $02 B $1b C $01 D $02 E $01 H $03 L $07 SP 05fd
+0000 0089 INX    H       	..p..  A $02 B $1b C $01 D $02 E $01 H $03 L $08 SP 05fd
+0000 008a MOV    C,M     	..p..  A $02 B $1b C $02 D $02 E $01 H $03 L $08 SP 05fd
+0000 008b INX    H       	..p..  A $02 B $1b C $02 D $02 E $01 H $03 L $09 SP 05fd
+0000 008c INX    H       	..p..  A $02 B $1b C $02 D $02 E $01 H $03 L $0a SP 05fd
+0000 008d INX    H       	..p..  A $02 B $1b C $02 D $02 E $01 H $03 L $0b SP 05fd
+0000 008e INX    H       	..p..  A $02 B $1b C $02 D $02 E $01 H $03 L $0c SP 05fd
+0000 008f INX    H       	..p..  A $02 B $1b C $02 D $02 E $01 H $03 L $0d SP 05fd
+0000 0090 MOV    E,M     	..p..  A $02 B $1b C $02 D $02 E $03 H $03 L $0d SP 05fd
+0000 0091 INX    H       	..p..  A $02 B $1b C $02 D $02 E $03 H $03 L $0e SP 05fd
+0000 0092 MOV    D,M     	..p..  A $02 B $1b C $02 D $30 E $03 H $03 L $0e SP 05fd
+0000 0093 XCHG           	..p..  A $02 B $1b C $02 D $03 E $0e H $30 L $03 SP 05fd
+0000 0094 SPHL           	..p..  A $02 B $1b C $02 D $03 E $0e H $30 L $03 SP 3003
+0000 0095 XCHG           	..p..  A $02 B $1b C $02 D $30 E $03 H $03 L $0e SP 3003
+0000 0096 DCX    H       	..p..  A $02 B $1b C $02 D $30 E $03 H $03 L $0d SP 3003
+0000 0097 DCX    H       	..p..  A $02 B $1b C $02 D $30 E $03 H $03 L $0c SP 3003
+0000 0098 DCX    H       	..p..  A $02 B $1b C $02 D $30 E $03 H $03 L $0b SP 3003
+0000 0099 DCX    H       	..p..  A $02 B $1b C $02 D $30 E $03 H $03 L $0a SP 3003
+0000 009a MOV    E,M     	..p..  A $02 B $1b C $02 D $30 E $03 H $03 L $0a SP 3003
+0000 009b DCX    H       	..p..  A $02 B $1b C $02 D $30 E $03 H $03 L $09 SP 3003
+0000 009c MOV    D,M     	..p..  A $02 B $1b C $02 D $00 E $03 H $03 L $09 SP 3003
+0000 009d PUSH   D       	..p..  A $02 B $1b C $02 D $00 E $03 H $03 L $09 SP 3001
+0000 009e INX    H       	..p..  A $02 B $1b C $02 D $00 E $03 H $03 L $0a SP 3001
+0000 009f INX    H       	..p..  A $02 B $1b C $02 D $00 E $03 H $03 L $0b SP 3001
+0000 00a0 MOV    D,M     	..p..  A $02 B $1b C $02 D $00 E $03 H $03 L $0b SP 3001
+0000 00a1 INX    H       	..p..  A $02 B $1b C $02 D $00 E $03 H $03 L $0c SP 3001
+0000 00a2 MOV    E,M     	..p..  A $02 B $1b C $02 D $00 E $fb H $03 L $0c SP 3001
+0000 00a3 PUSH   D       	..p..  A $02 B $1b C $02 D $00 E $fb H $03 L $0c SP 2fff
+0000 00a4 INX    H       	..p..  A $02 B $1b C $02 D $00 E $fb H $03 L $0d SP 2fff
+0000 00a5 INX    H       	..p..  A $02 B $1b C $02 D $00 E $fb H $03 L $0e SP 2fff
+0000 00a6 INX    H       	..p..  A $02 B $1b C $02 D $00 E $fb H $03 L $0f SP 2fff
+0000 00a7 MOV    E,M     	..p..  A $02 B $1b C $02 D $00 E $02 H $03 L $0f SP 2fff
+0000 00a8 INX    H       	..p..  A $02 B $1b C $02 D $00 E $02 H $03 L $10 SP 2fff
+0000 00a9 MOV    D,M     	..p..  A $02 B $1b C $02 D $00 E $02 H $03 L $10 SP 2fff
+0000 00aa PUSH   D       	..p..  A $02 B $1b C $02 D $00 E $02 H $03 L $10 SP 2ffd
+0000 00ab INX    H       	..p..  A $02 B $1b C $02 D $00 E $02 H $03 L $11 SP 2ffd
+0000 00ac MOV    D,M     	..p..  A $02 B $1b C $02 D $00 E $02 H $03 L $11 SP 2ffd
+0000 00ad INX    H       	..p..  A $02 B $1b C $02 D $00 E $02 H $03 L $12 SP 2ffd
+0000 00ae MOV    E,M     	..p..  A $02 B $1b C $02 D $00 E $81 H $03 L $12 SP 2ffd
+0000 00af PUSH   D       	..p..  A $02 B $1b C $02 D $00 E $81 H $03 L $12 SP 2ffb
+0000 00b0 INX    H       	..p..  A $02 B $1b C $02 D $00 E $81 H $03 L $13 SP 2ffb
+0000 00b1 MOV    L,M     	..p..  A $02 B $1b C $02 D $00 E $81 H $03 L $00 SP 2ffb
+0000 00b2 MOV    H,A     	..p..  A $02 B $1b C $02 D $00 E $81 H $02 L $00 SP 2ffb
+0000 00b3 PUSH   H       	..p..  A $02 B $1b C $02 D $00 E $81 H $02 L $00 SP 2ff9
+0000 00b4 POP    PSW     	.....  A $02 B $1b C $02 D $00 E $81 H $02 L $00 SP 2ffb
+0000 00b5 POP    D       	.....  A $02 B $1b C $02 D $00 E $81 H $02 L $00 SP 2ffd
+0000 00b6 POP    H       	.....  A $02 B $1b C $02 D $00 E $81 H $00 L $02 SP 2fff
+0000 00b7 EI             	.....  A $02 B $1b C $02 D $00 E $81 H $00 L $02 SP 2fff
+
+
+
+
+
+Scheduler Timer is: 4
+0000 00b8 PCHL           	.....  A $02 B $1b C $02 D $00 E $03 H $00 L $fb SP 3003
+Scheduler Timer is: 9
+0081 0002 INX    H       	.....  A $02 B $1b C $02 D $00 E $03 H $00 L $fc SP 3003
+Scheduler Timer is: 14
+0081 0003 INX    H       	.....  A $02 B $1b C $02 D $00 E $03 H $00 L $fd SP 3003
+Scheduler Timer is: 19
+0081 0004 INX    H       	.....  A $02 B $1b C $02 D $00 E $03 H $00 L $fe SP 3003
+Scheduler Timer is: 24
+0081 0005 MOV    A,M     	.....  A $00 B $1b C $02 D $00 E $03 H $00 L $fe SP 3003
+Scheduler Timer is: 31
+0081 0006 INX    H       	.....  A $00 B $1b C $02 D $00 E $03 H $00 L $ff SP 3003
+Scheduler Timer is: 36
+
+
+
+

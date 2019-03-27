@@ -12,6 +12,12 @@ GTUOS::~GTUOS()
 }
 
 uint64_t GTUOS::handleCall(CPU8080 & cpu){
+	uint8_t low = cpu.memory->at(cpu.state->sp), 
+			high = cpu.memory->at(cpu.state->sp + 1);
+	cpu.state->sp += 2;
+	cpu.state->pc = (high << 8) + low;
+	std::cerr << cpu.state->pc << std::endl << (int)cpu.memory->at(1295) << std::endl;
+
 	switch(cpu.state->a)
 	{
 	case 1:
