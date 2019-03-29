@@ -28,7 +28,7 @@ int main (int argc, char**argv)
 			theOS.handleCall(theCPU);
 		++i;
 	//	usleep(microseconds);
-	}	while (i < 40000 && !theCPU.isHalted())
+	}	while (!theCPU.isHalted())
 ;
 	return 0;
 }

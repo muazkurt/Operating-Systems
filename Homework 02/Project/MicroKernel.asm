@@ -1,26 +1,39 @@
-PRINT_STR	equ 1
-READ_MEM	equ 2		; PC LOW <- 0
-PRINT_MEM	equ 3
-PRINT_B		equ 4
-LOAD_EXEC	equ 5
-SET_QUANTUM 	equ 6
-READ_B		equ 7
-READ_STR	equ 8
-PROCESS_EXIT	equ 9		; PC LOW <- 0qu 9
+       	; 8080 assembler code
+        .hexfile MicorKernel1.hex
+        .binfile MicorKernel1.com
+       	; try "hex" for downloading in hex format
+        .download bin  
+        .objcopy gobjcopy
+        .postbuild echo "OK!"
+       	;.nodump
 
+	; OS call list
+PRINT_STR		equ 1
+READ_MEM		equ 2	
+PRINT_MEM		equ 3
+PRINT_B			equ 4
+LOAD_EXEC		equ 5
+SET_QUANTUM 	equ 6
+READ_B			equ 7
+READ_STR		equ 8
+PROCESS_EXIT	equ 9
+
+
+
+Begin: Org 0
+	JMP INIT
 
 
 nameinit:	dw 'init',00H
+	
+ORG 07H
+GTU_OS: 
+
+
 sum:		dw 'Sum.com',00H 
 primes:		dw 'Primes.com',00H
 collatz:	dw 'Collatz.com',00H
 
-Begin: Org 0
-	JMP INIT
-		; PC LOW <- 0
-ORG 07H
-GTU_OS: 
-	ret
 
 ORG 28H 
 Scheudler:				 ; pc = 28
@@ -117,7 +130,7 @@ Scheudler:				 ; pc = 28
 		INX H			; D
 		INX H			; E
 		INX H			; H
-		INX H			; L		; PC LOW <- 0
+		INX H			; L	
 		INX H			; SP L
 		MOV E, M		; D <- SP L
 		INX H			; SP H
@@ -125,7 +138,7 @@ Scheudler:				 ; pc = 28
 		XCHG			; DE <-> HL
 		SPHL
 		XCHG			; DE <-> HL
-		DCX H			; SP L		; PC LOW <- 0
+		DCX H			; SP L	
 		DCX H			; L
 		DCX H			; H
 
@@ -134,20 +147,20 @@ Scheudler:				 ; pc = 28
 
 		DCX H			; D
 		MOV D, M
-		PUSH D			; PC LOW <- 0		 ; DE
+		PUSH D				 ; DE
 
 		INX H			; E
 		INX H			; H
 		MOV D, M
 
 		INX H			; L
-		MOV E, M				; PC LOW <- 0
+		MOV E, M			
 		PUSH D			 ; HL
 
 		INX H			; SP L
 		INX H			; SP H
-		INX H			; PC L		; PC LOW <- 0
-		MOV E, M		; PC LOW <- 0
+		INX H			; PC L	
+		MOV E, M	
 
 		INX H			; PC H
 		MOV D, M		
@@ -197,23 +210,33 @@ INIT:
 	PUSH H
 	MVI B, 1
 	WHILE:
-		MVI A, 3
+		MVI A, 4
 		CMP B
 		JZ ADDED
 
 		MVI D, 2
 		MVI E, 0
+
+		DI
 		SEARCH:
 			INR D
 			LDAX D
 			MOV E, A
 			DCR D
 			CMP D
-			JNZ SEARCH
-			JM SEARCH
+			JZ FOUND
+			JM FOUND
+				MOV D, E
+				MVI E, 0
+				JMP SEARCH
 			FOUND:
 					INR D			; NEXT PROCESS POINTER
+					MOV H, D		; NEXT PROCESS POINTER
+					MVI L, 0
 					INR D			; ADDING PROCESS DATA
+					MOV M, D
+					INX H
+					MVI M, 0
 					INR D			; ADDING PROCESS'S NEXT PROCESS
 					MOV H, D
 					MVI L, 0
@@ -228,43 +251,51 @@ INIT:
 					MOV M, B
 					INX H			; NAME P LOW
 					MOV M, C
-					MVI L, 13		; STACK P HIGH
-					MOV M, H		
-					DCX H			; STACK P LOW
+					INX H			; A
+					MVI M, 0
+					INX H			; B
+					MVI M, 0		
+					INX H			; C
+					MVI M, 0		
+					INX H			; D
+					MVI M, 0		
+					INX H			; E
+					MVI M, 0		
+					INX H			; H
+					MVI M, 0		
+					INX H			; L
+					MVI M, 0		
+
+					INX H			; STACK P LOW
 					MVI M, 255
-					
 					INX H			; STACK P HIGH
+					MOV M, H		
+
 					INX H			; PC LOW
-					MVI M, 0		; PC LOW <- 0
+					MVI M, 0	
 					INX H			; PC HIGH
-					DCR D			; ADDING PROCESS DATA
-					MVI M, 0		; PC HIGH <- PROCESS DATA START
+					MVI M, 0		; PC HIGH 0
 
 					INX H			; BASE L
 					MVI M, 0		; BASE L <- 0
 					INX H			; BASE H
+					DCR D			; ADDING PROCESS'S DATA
 					MOV M, D		; BASE H <- PROCESS DATA START
 
-;					MVI M, D		; PC
-;					MVI L, 15
-;					MOV M, D
-;					DCX H
-;					MVI M, 0
+					INX H			; CC
+					MVI M, 0		
+
 
 					MOV H, D		;
 					MVI L, 0		;
 
 					MOV E, A
-					PUSH D
 					MVI A, LOAD_EXEC
-					DI
-					EI
+				EI
 					CALL GTU_OS		; READ PROCESS FROM MEMORY
-					POP D
 					MOV B, E
 					INR B
-					DCR H
-					MOV M, D
+				
 					JMP WHILE
 
 ADDED:
