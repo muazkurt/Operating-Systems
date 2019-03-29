@@ -929,9 +929,6 @@ namespace {
       state->pc--;
       Disassemble8080Op(memory, state->pc);
       printf("\n");
-      
-		  for(int i = 0; i < ((10 << 8) | 0); ++i)
-			  printf("%d : %d\n", i, (int) memory->physicalAt(i));
       exit(1);
     }
 

@@ -85,16 +85,7 @@ uint64_t GTUOS::handleCall(CPU8080 & cpu){
 				base_p != temp;
 				temp = cpu.memory->physicalAt((searcher + 1 << 8) | 0))
 					searcher = temp;
-
-			std::cerr 
-					<< "base: " << (int) base_p
-					<< ", next_p: " << (int) next_p 
-					<< " searcher: " << searcher
-					<< ", searcher's next: " << (int) cpu.memory->physicalAt((searcher + 1 << 8) | 0)
-					<< std::endl;
 			cpu.memory->physicalAt((searcher + 1 << 8) | 0) = next_p;
-			std::cerr << "updated searcher's next: " << (int) cpu.memory->physicalAt((searcher + 1 << 8) | 0)
-					<< std::endl;
 			cpu.dispatchScheduler();
 		}
 		break;
