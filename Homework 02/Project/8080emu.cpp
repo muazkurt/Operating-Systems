@@ -2292,8 +2292,8 @@ unsigned CPU8080::Emulate8080p(int debug) {
 	scheduler_timer += cycles8080[*lastOpcode];
 	if(state->int_enable ==0)
 		scheduler_timer =0;
-	if (debug != 0)
-		printf("Scheduler Timer is: %d\n",scheduler_timer);
+	if (debug != 0);
+		//printf("Scheduler Timer is: %d\n",scheduler_timer);
 	if(state->int_enable ==1 && scheduler_timer > quantum)
 	{
 	        if (debug != 0)

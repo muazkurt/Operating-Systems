@@ -16,7 +16,7 @@ uint64_t GTUOS::handleCall(CPU8080 & cpu){
 			high = cpu.memory->at(cpu.state->sp + 1);
 	cpu.state->sp += 2;
 	cpu.state->pc = (high << 8) + low;
-	std::cerr << cpu.state->pc << std::endl << (int)cpu.memory->at(1295) << std::endl;
+	std::cout << std::endl << "Caller pc: " << cpu.state->pc << std::endl;
 
 	switch(cpu.state->a)
 	{
@@ -53,8 +53,8 @@ uint64_t GTUOS::handleCall(CPU8080 & cpu){
 			for(int i = (cpu.state->b << 8) | cpu.state->c; cpu.memory->physicalAt(i) != 0; ++i)
 				fname += cpu.memory->physicalAt(i);
 			cpu.ReadFileIntoMemoryAt(fname.c_str(), (cpu.state->h << 8) | cpu.state->l);
-			//Memmory management...
-			//Add process to the list of scheduler
+			for(int i = ((cpu.state->h + 1) << 8) | cpu.state->l; i < (((cpu.state->h + 1) << 8) | 20) ; ++i)
+				std::cout << i << ": " << (int) cpu.memory->at(i)<< std::endl;
 			cpu.dispatchScheduler();
 		}
 		break;

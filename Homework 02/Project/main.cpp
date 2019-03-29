@@ -25,16 +25,10 @@ int main (int argc, char**argv)
 	{
 		theCPU.Emulate8080p(DEBUG);
 		if(theCPU.isSystemCall())
-		{
-			std::cout << std::endl;
-			std::cout << std::endl;
-			std::cout << std::endl;
-			std::cout << std::endl;
 			theOS.handleCall(theCPU);
-		}
 		++i;
 	//	usleep(microseconds);
-	}	while (i < 10000 && !theCPU.isHalted())
+	}	while (i < 40000 && !theCPU.isHalted())
 ;
 	return 0;
 }
