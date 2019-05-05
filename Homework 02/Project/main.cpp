@@ -13,21 +13,22 @@ int main (int argc, char**argv)
 	}
 	int DEBUG = atoi(argv[2]);
 
-	unsigned int microseconds = 100000;
+	unsigned int microseconds = 200000;
 
 	Memory mem(65535);
 	CPU8080 theCPU(&mem);
 	GTUOS	theOS;
 
-	theCPU.ReadFileIntoMemoryAt(argv[1], 0x0000);	
- 
+	theCPU.ReadFileIntoMemoryAt(argv[1], 0x0000);
+	int i = 0;
 	do	
 	{
 		theCPU.Emulate8080p(DEBUG);
 		if(theCPU.isSystemCall())
 			theOS.handleCall(theCPU);
-		usleep(microseconds);
-	}	while (0 && !theCPU.isHalted())
+		++i;
+	//	usleep(microseconds);
+	}	while (!theCPU.isHalted())
 ;
 	return 0;
 }

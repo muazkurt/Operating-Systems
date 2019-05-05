@@ -8,34 +8,24 @@
         ;.nodump
 
 	; OS call list
-PRINT_STR		equ 1
-READ_MEM		equ 2	
-PRINT_MEM		equ 3
-PRINT_B			equ 4
-LOAD_EXEC		equ 5
+PRINT_STR	equ 1
+READ_MEM	equ 2
+PRINT_MEM	equ 3
+PRINT_B		equ 4
+LOAD_EXEC	equ 5
 SET_QUANTUM 	equ 6
-READ_B			equ 7
-READ_STR		equ 8
+READ_B		equ 7
+READ_STR	equ 8
 PROCESS_EXIT	equ 9
-
-
-
-	org 000H
-	jmp begin
-
-	; Start of our Operating System
-	org 007H
-GTU_OS:	
-	; ---------------------------------------------------------------
-	; YOU SHOULD NOT CHANGE ANYTHING ABOVE THIS LINE        
-
-	;This program prints a null terminated string to the screen
 
 string:	dw ', ',00H 
 NewLine: dw '',00AH,00H
 errorText: dw 'NEGATIVE INPUT', 00AH, 00H
 
+org 07H
+GTU_OS:	
 
+org 00H
 begin:
 		MVI A, READ_B
 		call GTU_OS

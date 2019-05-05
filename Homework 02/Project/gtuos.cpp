@@ -12,6 +12,11 @@ GTUOS::~GTUOS()
 }
 
 uint64_t GTUOS::handleCall(CPU8080 & cpu){
+	uint8_t low = cpu.memory->at(cpu.state->sp), 
+			high = cpu.memory->at(cpu.state->sp + 1);
+	cpu.state->sp += 2;
+	cpu.state->pc = (high << 8) + low;
+
 	switch(cpu.state->a)
 	{
 	case 1:
@@ -47,8 +52,6 @@ uint64_t GTUOS::handleCall(CPU8080 & cpu){
 			for(int i = (cpu.state->b << 8) | cpu.state->c; cpu.memory->physicalAt(i) != 0; ++i)
 				fname += cpu.memory->physicalAt(i);
 			cpu.ReadFileIntoMemoryAt(fname.c_str(), (cpu.state->h << 8) | cpu.state->l);
-			//Memmory management...
-			//Add process to the list of scheduler
 			cpu.dispatchScheduler();
 		}
 		break;
@@ -74,9 +77,17 @@ uint64_t GTUOS::handleCall(CPU8080 & cpu){
 		}
 		break;
 	case 9:
-		
-		
-		cpu.dispatchScheduler();
+		{
+			uint8_t base_p = cpu.memory->at(273),
+					next_p = cpu.memory->at(256);
+			int searcher = 2;
+			for(uint8_t temp = cpu.memory->physicalAt((searcher + 1 << 8) | 0); 
+				base_p != temp;
+				temp = cpu.memory->physicalAt((searcher + 1 << 8) | 0))
+					searcher = temp;
+			cpu.memory->physicalAt((searcher + 1 << 8) | 0) = next_p;
+			cpu.dispatchScheduler();
+		}
 		break;
 	default:
 		std::cerr	<< "\n Unimplemented OS call" << std::endl;

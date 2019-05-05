@@ -12,6 +12,7 @@ class GTUOS{
 		~GTUOS();
 		uint64_t handleCall(CPU8080 & cpu);
 	private:
+		int k = 0;
 		std::ofstream output;
 		std::ifstream input;
 };
