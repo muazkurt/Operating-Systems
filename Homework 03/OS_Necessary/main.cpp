@@ -19,6 +19,8 @@ int main (int argc, char**argv)
   
   theCPU->ReadFileIntoMemoryAt(argv[1], 0x0000);
   theCPU->setQuantum(200);
+  
+  int i = 0;
   do{
     if(DEBUG == 2)
       getchar();
@@ -26,7 +28,7 @@ int main (int argc, char**argv)
     theCPU->Emulate8080p(DEBUG);
       if(theCPU->isSystemCall())
 	      theOS.handleCall(*theCPU);
-  }while(!theCPU->isHalted());
+  }while(i++ != 100000 && !theCPU->isHalted());
   free(theCPU);
   return 0;
 }

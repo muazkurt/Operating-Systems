@@ -59,7 +59,6 @@
 	PENTRY_LEN 			equ 00100h		;ptable entry ,256 bytes
 	PROCESS_START_ADDR 	equ 00500h		;Start address of the processes
 	MAILBOX_IN_PR_SPACE	equ 00120h		;0500h * x + 120h = own mailbox of process.
-	MAILBOX_OUT_PR_SPC	equ	00156h		;own_mailbox + 54 = sending mailbox.
 	PROCESS_LEN 		equ 00200h		;Length of the process,512 bytes
 
 
@@ -73,10 +72,10 @@
 
 	
 	.org 13d
-	init 		dw 'Init'			,00H
+	init 			dw 'Init'			,00H
 	RECEIVER:		dw './receiver.com'	,00H
 	.org 61h
-	SENDER:		dw './sender.com'	,00H
+	SENDER:			dw './sender.com'	,00H
 	
 		
 	A_ADDR				equ	0d
@@ -143,11 +142,28 @@
 		MVI A,5
 		LXI B,SENDER
 		call GTU_OS
+		
+		PUSH H
+		PUSH D
+		LXI D, MAILBOX_IN_PR_SPACE
+		DAD D
+		MVI M, 1
+		POP D
+		POP H
+
 
 		LXI D,PROCESS_LEN
 		DAD D
 		LXI B,RECEIVER
 		call GTU_OS
+
+		PUSH H
+		PUSH D
+		LXI D, MAILBOX_IN_PR_SPACE
+		DAD D
+		MVI M, 1
+		POP D
+		POP H
 
 
 		call INIT_PROCESS
@@ -309,7 +325,7 @@
 		
 		INX D	;CONDITION
 		INX D	;MAILBOX ID
-		MOV A, H
+		MOV A,H	; Store Mailbox ID, If it's 1 then read mode, own mailbox. Otherwise, write to given PID's mailbox.
 		STAX D	; STORE MAILBOX ID
 
 		POP H
@@ -327,11 +343,11 @@
 		MVI H, 0
 		RZ		;Return if it is
 		LXI B,SENDER	;Check if it is second process
-		MVI H,2
+		MVI H,2			; Writer to ID
 		CPI 1
 		RZ
 		LXI B,RECEIVER	;Check if it is third process
-		MVI H,1
+		MVI H,1			; Read to... If 0, read from own mailbox.
 		CPI 2
 		RZ
 		ret

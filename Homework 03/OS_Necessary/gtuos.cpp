@@ -77,7 +77,19 @@ uint64_t GTUOS::handleCall(CPU8080& cpu)
 				}
 				printf("\n");
 				break;
+			case 12:
+				cout << endl << "generated :" << (cpu.state->b = ((Memory *) cpu.memory)->getBaseRegister() >> 8) << " by ";
+				//printf("%x\nWrites to: %x\n", ((Memory *) cpu.memory)->getBaseRegister(), (cpu.state->h << 8) | cpu.state->l);
+
+				cycles = 60;
+				break;
+			case 13:
+				cycles = wait(cpu);
+				break;
+			case 14:
+				break;
 			default:
+				exit(EXIT_FAILURE);
 				break;
 		}
 	}
@@ -85,48 +97,83 @@ uint64_t GTUOS::handleCall(CPU8080& cpu)
 		cout << "Not found input.txt or output.txt" << endl;
 	return cycles;
 }
+
+
+
+uint64_t GTUOS::wait(CPU8080& cpu)
+{
+	uint16_t 	condition_addr	= PROCESS_TABLE_START + PTABLE_ENTRY_LENGTH * cpu.state->c
+									+ CONDITION;
+	uint8_t 	status_addr		= PROCESS_TABLE_START + PTABLE_ENTRY_LENGTH * cpu.state->c
+									+ P_STATE;
+
+	cpu.memory->physicalAt(condition_addr)	= WAITING;
+	cpu.memory->physicalAt(status_addr)		= PROCESS_BLOCKED;
+	cpu.dispatchScheduler();
+	return 200;
+}
+
+
+uint64_t GTUOS::signal(CPU8080& cpu)
+{
+	uint16_t 	condition_addr	= PROCESS_TABLE_START + PTABLE_ENTRY_LENGTH * cpu.state->c
+									+ CONDITION;
+	uint8_t 	status_addr		= PROCESS_TABLE_START + PTABLE_ENTRY_LENGTH * cpu.state->c
+									+ P_STATE;
+
+	cpu.memory->physicalAt(condition_addr)	= SIGNALLED;
+	cpu.memory->physicalAt(status_addr)		= PROCESS_READY;
+	cpu.dispatchScheduler();
+	return 200;
+}
+
+
 /*
  * Called when scheduling happened
  * Prints PID,PC,MEM_BASE Content and Address,SP
  **/
 uint64_t GTUOS::printWhole(CPU8080& cpu)
 {
-	uint16_t lastProcess = 0x00cffe;
-	uint16_t ptableStart = 0x0d000;
-	uint16_t ptableLen = 0x00100;
+	uint8_t pid 			= cpu.memory->at(LAST_PROCESS);
+	uint16_t ptableAddr 	= PROCESS_TABLE_START + pid * PTABLE_ENTRY_LENGTH;
+	uint16_t pAddr		 	= BASE_PROCESS_ADDR + pid * PROCESS_LENGTH;
 
-	uint16_t ptableAddr = ptableStart;
-	uint8_t pid = cpu.memory->at(lastProcess);
-
-	uint8_t tempPid = pid;
-	while(tempPid > 0)
+	uint16_t sp 			= (cpu.memory->at(ptableAddr + STACK_P_H) 	<< 8) | cpu.memory->at(ptableAddr + STACK_P_L);
+	uint16_t pc				= (cpu.memory->at(ptableAddr + PROG_CNT_H) << 8) | cpu.memory->at(ptableAddr + PROG_CNT_L);
+	uint16_t base 			= (cpu.memory->at(ptableAddr + BASE_REG_H) << 8) | cpu.memory->at(ptableAddr + BASE_REG_L);
+	uint16_t baseContent 	= base + pc;
+	uint16_t processNameAddr= (cpu.memory->at(ptableAddr + P_NAME_H) << 8) | cpu.memory->at(ptableAddr + P_NAME_L);
 	{
-		ptableAddr += ptableLen;
-		tempPid--;
-	}
-	uint16_t pc = (cpu.memory->at(ptableAddr + 10) << 8) | cpu.memory->at(ptableAddr + 9);
-	uint16_t sp = (cpu.memory->at(ptableAddr + 8) << 8) | cpu.memory->at(ptableAddr + 7);
-	uint16_t base = (cpu.memory->at(ptableAddr + 12) << 8) | cpu.memory->at(ptableAddr + 11);
-	uint16_t baseContent = base + pc;
-	uint16_t processNameAddr = (cpu.memory->at(ptableAddr + 17) << 8) | cpu.memory->at(ptableAddr + 16);
-	
-	cout << "\n----Context Scheduling----" << endl;
-	printf("PID	 :\t%4d | ",	pid);
-	printf("PNAME	: ");
+		cout << "\n----Context Scheduling----" << endl;
+		printf("PID	 :\t%4d | ",	pid);
+		printf("PNAME	: ");
+		while(cpu.memory->at(processNameAddr) != (uint8_t) 0)
+		{
+			cout << cpu.memory->at(processNameAddr);
+			processNameAddr++;
+		}
+		printf("\t| ");
 
-	while(cpu.memory->at(processNameAddr) != (uint8_t) 0)
+		printf("PC	:\t%4x | ",	pc);
+		printf("SP	:\t%4x = %4x | ",	sp, cpu.memory->at(sp));
+		printf("BASE	:\t%4x | ",	base);
+		printf("BASE_CONTENT	:\t%4x\n",	baseContent);
+		cout << endl;
+	}
+	uint8_t dest = cpu.memory->at(ptableAddr + MAIL_DEST_ID);
+	cout << (int) dest << endl;
+	if(dest == 0);
+	else
 	{
-		cout << cpu.memory->at(processNameAddr);
-		processNameAddr++;
+		uint16_t destAddr = BASE_PROCESS_ADDR;
+		for(uint8_t tempPid = dest; tempPid > 0; --tempPid)
+			destAddr	+= PROCESS_LENGTH;
+		destAddr	+= MAILBOX_START;
+		pAddr 		+= MAILBOX_START;
+		for(int i = 0; i < 53; ++i)
+			cout << (int) (cpu.memory->physicalAt(pAddr + i) = cpu.memory->physicalAt(destAddr + i)) << " ";
 	}
-	printf("\t| ");
-
-	printf("PC	:\t%4x | ",	pc);
-	printf("SP	:\t%4x | ",	sp);
-	printf("BASE	:\t%4x | ",	base);
-	printf("BASE_CONTENT	:\t%4x\n",	baseContent);
-	cout << endl;
-
+	cout << endl << "--------------------------------------" << endl;
 	return CYCLE;
 }
 
@@ -148,13 +195,7 @@ uint64_t GTUOS::setQuantum(CPU8080& cpu){
 uint64_t GTUOS::processExit(CPU8080& cpu)
 {
 
-	uint16_t baseProcessAddr = 0x00500;
-	uint16_t processLen = 512;
-
-	uint16_t ptableStart = 0x0d000;
-	uint16_t ptableLen = 256;
-
-	uint16_t ptableAddr = ptableStart;
+	uint16_t ptableAddr = PROCESS_TABLE_START;
 	
 	uint16_t currProcessAddr = ((Memory*)(cpu.memory))->getBaseRegister();
 	uint16_t tempProcessAddr = currProcessAddr;
@@ -162,24 +203,23 @@ uint64_t GTUOS::processExit(CPU8080& cpu)
 	uint16_t schedulerAddr = 0x00040;
 	
 	int i = 0;
-	while(tempProcessAddr != baseProcessAddr){
-	tempProcessAddr -=processLen;
+	while(tempProcessAddr != BASE_PROCESS_ADDR){
+	tempProcessAddr -=PROCESS_LENGTH;
 	i++;
 	}
 
 	while(i > 0){
-	ptableAddr += ptableLen;
+	ptableAddr += PTABLE_ENTRY_LENGTH;
 	i--;
 	}
 
-	uint16_t lastProcess = 0x0cffe;
 	uint16_t processCount = 0x0cfff;
 	
 	((Memory*)(cpu.memory))->setBaseRegister(0);
-	memset(&cpu.memory->at(currProcessAddr),0,processLen);
-	memset(&cpu.memory->at(ptableAddr),0,ptableLen);
+	memset(&cpu.memory->at(currProcessAddr),0,PROCESS_LENGTH);
+	memset(&cpu.memory->at(ptableAddr),0,PTABLE_ENTRY_LENGTH);
 
-	//cpu.memory->at(lastProcess) = cpu.memory->at(lastProcess) - 1;
+	//cpu.memory->at(LAST_PROCESS) = cpu.memory->at(LAST_PROCESS) - 1;
 	cpu.memory->at(processCount) = cpu.memory->at(processCount) - 1;
 	cpu.state->pc = schedulerAddr; //go back to scheduler
 	return (CYCLE * 8);

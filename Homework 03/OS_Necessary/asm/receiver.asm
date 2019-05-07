@@ -1,6 +1,6 @@
 				; 8080 assembler code
-        .hexfile sender.hex
-        .binfile sender.com
+        .hexfile receiver.hex
+        .binfile receiver.com
         ; try "hex" for downloading in hex format
         .download bin  
         .objcopy gobjcopy
@@ -21,7 +21,7 @@ PROCESS_EXIT	equ 9
 RAND_INT		equ 12
 WAIT			equ 13
 SIGNAL			equ 14	
-STACK_BEFORE 	equ 53757
+STACK_BEFORE 	equ 54013
 
 
 	; Position for stack pointer
@@ -52,17 +52,16 @@ GTU_OS:
 	; sum. The results is also printed on the screen.
 
 
+
 OUT_NUM				equ 8d
 NUM 				equ 50d
-MUTEX_XTHL			equ 0011Fh		;0500h * x + 120h = own mailbox of process.
+MUTEX_XTHL	        equ 0011Fh		;0500h + 0200h * x + 120h = own mailbox of process.
 									; declared as 119 because, XTHL exchanges sp and sp + 1
 MAILBOX_WRITE_MUTEX	equ 00120h	
 MAILBOX_WRITE_SEM1	equ 00121h	
 MAILBOX_WRITE_SEM2	equ 00122h	
 MAILBOX_O_INDEX		equ 00123h
 begin:
-	;; LXI SP,stack 	; always initialize the stack pointer
-
 
 ;MVI A, OUT_NUM
 ;MVI D, 0
@@ -77,43 +76,44 @@ begin:
 	loop:
 		CALL LOCK					;Lock mutex.
 		LXI H,MAILBOX_WRITE_SEM1	;SEMAPHORE, WHERE TO PUT ITEM
-		MVI A, 50
-	C_WAIT:
-		CMP M
-		JNZ GOON
+        MVI A, 0
+    C_WAIT:
+        CMP M
+        JNZ GOON
 			PUSH B
 			MVI A, WAIT
 			MVI B, 1
-			MVI C, 1
+			MVI C, 2
 			CALL GTU_OS
 			POP B
 			JMP C_WAIT
-	GOON:
-		MOV E, M
+    GOON:
+        MOV E,M
 		LXI H,MAILBOX_O_INDEX		;first element of mailbox.
-		MVI D, 0
+		MVI D,0
 		DAD D
-		CALL produce				;Generate a random number.
+		CALL consume				;Generate a random number.
 
 		LXI H,MAILBOX_WRITE_SEM1	;MAILBOX COUNTER'S POSITION		
-		INR M						;DE-Sem Write. Save mailbox's item count in semaphore..
+	    DCR M						;DE-Sem Write. Save mailbox's item count in semaphore..
 		CALL UNLOCK
-		PUSH B
-		MVI A, SIGNAL
-		MVI B, 1
-		MVI C, 2
-		CALL GTU_OS
-		POP B
+        PUSH B
+        MVI A, SIGNAL
+        MVI B, 1
+        MVI C, 1
+        CALL GTU_OS
+        POP B
 		MVI A, NUM
 		CMP M
 		JNC loop
 
-	LXI H,MAILBOX_WRITE_SEM2
-	MVI A, 1
-OOOHOOOO:
-	CMP M
-	JNZ OOOHOOOO
+    LXI H, MAILBOX_WRITE_SEM2
+    MVI M, 1
 
+OOOHOOOO:
+    MVI A, 0
+    CMP M
+    JNZ OOOHOOOO
 ;	CALL UNLOCK
 ;	MVI A, SIGNAL
 ;	MVI B, 2
@@ -130,10 +130,8 @@ call GTU_OS
 	
 
 ;;	HL -> address of adding entry's position.
-produce:
-	MVI A, RAND_INT
-	call GTU_OS
-	MOV M, B
+consume:
+    
 	ret
 
 LOCK:
